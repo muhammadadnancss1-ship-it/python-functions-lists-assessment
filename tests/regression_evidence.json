@@ -1,0 +1,50 @@
+[
+  {
+    "case": "Non-decimal digit in marks",
+    "stdin": "Adnan\n24\n²\n80\n80\n80\n80\n80\n",
+    "original": {
+      "returncode": 1,
+      "stdout": "==================Result Card Generator================\nEnter student name: Enter roll number: Enter marks for English: ",
+      "stderr": "Traceback (most recent call last):\n  File \"/workspace/scratch/e269d1944651/functions_assessment_20261117/delivery/source/result_card_generator_original.py\", line 91, in <module>\n    marks.append(get_valid_marks(subject))\n                 ^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/scratch/e269d1944651/functions_assessment_20261117/delivery/source/result_card_generator_original.py\", line 36, in get_valid_marks\n    elif int(marks) > 100:\n         ^^^^^^^^^^\nValueError: invalid literal for int() with base 10: '²'\n",
+      "source_sha256": "90ab20626e76a8d507eed93493ca6a4648073a5a9b142fbcd7473d44dab5eb23"
+    },
+    "updated": {
+      "returncode": 0,
+      "stdout": "==================Result Card Generator================\nEnter student name: Enter roll number: Enter marks for English: Invalid marks! Please enter numbers only.\nEnter marks for English: Enter marks for Math: Enter marks for Physics: Enter marks for Chemistry: Enter marks for Computer: \n========== STUDENT RESULT CARD ==========\nStudent Name : Adnan\nRoll Number  : 24\n-----------------------------------------\nEnglish     : 80/100\nMath        : 80/100\nPhysics     : 80/100\nChemistry   : 80/100\nComputer    : 80/100\n-----------------------------------------\nTotal Marks  : 400/500\nPercentage   : 80.00%\nGrade        : A\nResult       : Pass\n=========================================\n",
+      "stderr": "",
+      "source_sha256": "b6b4e710b8316ac2673b8b20bba4eb573a72c211244f4468861eae36e31ac587"
+    }
+  },
+  {
+    "case": "Text household count",
+    "stdin": "abc\n1\n100\n",
+    "original": {
+      "returncode": 1,
+      "stdout": "===== ELECTRICITY BILL SYSTEM =====\nEnter the number of households: ",
+      "stderr": "Traceback (most recent call last):\n  File \"/workspace/scratch/e269d1944651/functions_assessment_20261117/delivery/source/smart_electricity_bill_original.py\", line 21, in <module>\n    households = int(input(\"Enter the number of households: \"))\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: invalid literal for int() with base 10: 'abc'\n",
+      "source_sha256": "2219ca9cc60abd934dc02e80d2954a238ac488888fc967c49fc00be476ba1f25"
+    },
+    "updated": {
+      "returncode": 0,
+      "stdout": "===== ELECTRICITY BILL SYSTEM =====\nPractice rates only: these are not actual electricity tariffs.\nEnter the number of households: Invalid input! Enter a whole number of 1 or more with at most 18 significant digits.\nEnter the number of households: \n--- Household 1 ---\nEnter electricity units consumed: Units Consumed: 100\nElectricity Bill: Rs. 1000\n\n===== MONTHLY REVENUE REPORT =====\nHouseholds Processed: 1\nTotal Revenue: Rs. 1000\n",
+      "stderr": "",
+      "source_sha256": "ac2ac02a544e9130e40c2f8aac5a22d9c067d4951e39d6bf3f5840af9429167f"
+    }
+  },
+  {
+    "case": "Negative units and completed-household count",
+    "stdin": "2\n-1\n100\n200\n",
+    "original": {
+      "returncode": 0,
+      "stdout": "===== ELECTRICITY BILL SYSTEM =====\nEnter the number of households: \n--- Household 1 ---\nEnter electricity units consumed: Invalid units! Please enter a non-negative value.\n\n--- Household 2 ---\nEnter electricity units consumed: Units Consumed: 100\nElectricity Bill: Rs. 1000\n\n===== MONTHLY REVENUE REPORT =====\nHouseholds Processed: 2\nTotal Revenue: Rs. 1000\n",
+      "stderr": "",
+      "source_sha256": "2219ca9cc60abd934dc02e80d2954a238ac488888fc967c49fc00be476ba1f25"
+    },
+    "updated": {
+      "returncode": 0,
+      "stdout": "===== ELECTRICITY BILL SYSTEM =====\nPractice rates only: these are not actual electricity tariffs.\nEnter the number of households: \n--- Household 1 ---\nEnter electricity units consumed: Invalid input! Enter a whole number of 0 or more with at most 18 significant digits.\nEnter electricity units consumed: Units Consumed: 100\nElectricity Bill: Rs. 1000\n\n--- Household 2 ---\nEnter electricity units consumed: Units Consumed: 200\nElectricity Bill: Rs. 2500\n\n===== MONTHLY REVENUE REPORT =====\nHouseholds Processed: 2\nTotal Revenue: Rs. 3500\n",
+      "stderr": "",
+      "source_sha256": "ac2ac02a544e9130e40c2f8aac5a22d9c067d4951e39d6bf3f5840af9429167f"
+    }
+  }
+]

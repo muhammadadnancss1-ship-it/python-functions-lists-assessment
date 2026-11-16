@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="260" viewBox="0 0 1000 260" role="img" aria-labelledby="title desc">
+<title id='title'>Python Functions, Lists and Loops Assessment</title><desc id='desc'>Two console programs: student result cards and fictional electricity bills.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse" markerUnits="strokeWidth"><path d="M 0 0 L 10 5 L 0 10 z" fill="#64748b"/></marker>
+<linearGradient id="hero" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#102b57"/><stop offset="1" stop-color="#35205c"/></linearGradient></defs>
+<rect width="1000" height="260" fill="#ffffff"/>
+<g font-family="DejaVu Sans, Arial, sans-serif">
+<rect x="8" y="8" width="984" height="244" rx="18" fill="url(#hero)" stroke="none"/>
+<text x="34" y="38" font-size="11" fill="#c4d9ff" font-weight="700" text-anchor="start">TWO PYTHON PROGRAMS / ONE ASSESSMENT</text>
+<text x="34" y="84" font-size="34" fill="#ffffff" font-weight="700" text-anchor="start">Functions, Lists</text>
+<text x="34" y="126" font-size="34" fill="#ffffff" font-weight="700" text-anchor="start">&amp; Loops</text>
+<text x="34" y="158" font-size="16" fill="#e3ebff" font-weight="400" text-anchor="start">Student results. Progressive electricity bills.</text>
+<rect x="34" y="193" width="108" height="30" rx="15" fill="#ffffff" stroke="none"/>
+<text x="88.0" y="213" font-size="10" fill="#233663" font-weight="700" text-anchor="middle">FUNCTIONS</text>
+<rect x="152" y="193" width="100" height="30" rx="15" fill="#ffffff" stroke="none"/>
+<text x="202.0" y="213" font-size="10" fill="#233663" font-weight="700" text-anchor="middle">STRINGS</text>
+<rect x="262" y="193" width="91" height="30" rx="15" fill="#ffffff" stroke="none"/>
+<text x="307.5" y="213" font-size="10" fill="#233663" font-weight="700" text-anchor="middle">LISTS</text>
+<rect x="363" y="193" width="96" height="30" rx="15" fill="#ffffff" stroke="none"/>
+<text x="411.0" y="213" font-size="10" fill="#233663" font-weight="700" text-anchor="middle">LOOPS</text>
+<rect x="603" y="42" width="361" height="184" rx="12" fill="#101b31" stroke="#52617d"/>
+<circle cx="623" cy="60" r="4" fill="#f87171"/>
+<circle cx="639" cy="60" r="4" fill="#fbbf24"/>
+<circle cx="655" cy="60" r="4" fill="#4ade80"/>
+<text x="944" y="66" font-size="10" fill="#b9c9e5" font-weight="400" text-anchor="end">result_card_generator.py</text>
+<text x="622" y="101" font-size="11" fill="#b7c5dd" font-weight="400" text-anchor="start"># Subject rule overrides the grade</text>
+<text x="622" y="133" font-size="13" fill="#c4b5fd" font-weight="600" text-anchor="start">if</text>
+<text x="640" y="133" font-size="11" fill="#93c5fd" font-weight="400" text-anchor="start">min(marks) &lt; SUBJECT_PASS_MARK:</text>
+<text x="639" y="164" font-size="13" fill="#a7f3d0" font-weight="400" text-anchor="start">grade = &quot;Fail&quot;</text>
+<text x="622" y="201" font-size="11" fill="#b9c9e5" font-weight="700" text-anchor="start">READ  →  VALIDATE  →  REPORT</text>
+</g>
+</svg>

@@ -1,0 +1,30 @@
+PYTHON FUNCTIONS, LISTS AND LOOPS — VERIFIED SUBMISSION
+Date: 17 November 2026
+Local runtime: Python 3.12.14
+
+PASS: 83 tests: 44 result-card scenarios, 32 electricity scenarios, 3 helper checks, 4 process/import checks.
+PASS: Both Python programs and the runnable test file compile.
+PASS: Guarded main() entry points; imports are silent and reusable.
+PASS: Required result-card helpers and all five subjects retained.
+PASS: Percentage grade thresholds and below-40 override verified.
+PASS: Progressive electricity slab boundaries and completed-household count verified.
+PASS: Conversion crashes and skipped-household counting reproduced in originals and corrected.
+PASS: Four README sample transcripts are actual passing-run captures.
+PASS: Source hashes match tests/recorded_runs.json.
+PASS: README names and all relative file/image links match delivered files.
+PASS: Five SVGs parse as XML, have white canvases, and use no external resources.
+PASS: Every arrow reference resolves; all SVG text fits within its canvas.
+PASS: All five SVGs rendered to PNG and visually reviewed.
+PASS: One HTML preview embeds all five SVGs and linked evidence files.
+PASS: HTML has six expandable sections, ten tables and unique heading anchors.
+PASS: Light/dark and expand/collapse control logic verified.
+
+HTML browser visual inspection was unavailable; no browser screenshot is claimed.
+CI is configured for Python 3.10, 3.12 and 3.13; remote CI has not run here.
+
+Scope: uploaded result-card and electricity programs. The original README's
+class-analyzer section did not match the supplied second program and was corrected.
+Folder name is retained from the README; author name remains YOUR_NAME.
+GitHub username is reused from the user's earlier clone command.
+No official assessment brief, marking weights, deadline or portal was supplied.
+No remote repository was created or published.

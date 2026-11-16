@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1670" viewBox="0 0 1000 1670" role="img" aria-labelledby="title desc">
+<title id='title'>Student result card program flow</title><desc id='desc'>Validate name and roll, repeat subject mark input, calculate the percentage grade and enforce the below-40 override.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse" markerUnits="strokeWidth"><path d="M 0 0 L 10 5 L 0 10 z" fill="#64748b"/></marker>
+<linearGradient id="hero" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#102b57"/><stop offset="1" stop-color="#35205c"/></linearGradient></defs>
+<rect width="1000" height="1670" fill="#ffffff"/>
+<g font-family="DejaVu Sans, Arial, sans-serif">
+<text x="28" y="31" font-size="11" fill="#2563eb" font-weight="700" text-anchor="start">TASK 01 / PROGRAM FLOW</text>
+<text x="28" y="64" font-size="27" fill="#17233b" font-weight="700" text-anchor="start">Student Result Card Generator</text>
+<text x="28" y="87" font-size="14" fill="#57657a" font-weight="400" text-anchor="start">main() collects five valid marks; any subject below 40 overrides the percentage grade.</text>
+<rect x="410.0" y="106.0" width="180" height="42" rx="21.0" fill="#f0fdf4" stroke="#15803d"/>
+<text x="500" y="132" font-size="15" fill="#17233b" font-weight="500" text-anchor="middle">Start main()</text>
+<rect x="345.0" y="181.0" width="310" height="60" rx="10" fill="#eff6ff" stroke="#2563eb"/>
+<text x="500" y="216" font-size="15" fill="#17233b" font-weight="500" text-anchor="middle">Read student name</text>
+<path d="M 500 263.0 L 615.0 313 L 500 363.0 L 385.0 313 Z" fill="#f5f3ff" stroke="#7c3aed"/>
+<text x="500" y="318" font-size="15" fill="#17233b" font-weight="500" text-anchor="middle">Letters and spaces?</text>
+<rect x="54.0" y="283.0" width="244" height="60" rx="10" fill="#fef2f2" stroke="#dc2626"/>
+<text x="176" y="308" font-size="15" fill="#17233b" font-weight="500" text-anchor="middle">Print name error</text>
+<text x="176" y="328" font-size="15" fill="#17233b" font-weight="500" text-anchor="middle">Retry name</text>
+<rect x="345.0" y="388.0" width="310" height="60" rx="10" fill="#eff6ff" stroke="#2563eb"/>
+<text x="500" y="423" font-size="15" fill="#17233b" font-weight="500" text-anchor="middle">format_name(): strip() + title()</text>
+<rect x="345.0" y="480.0" width="310" height="60" rx="10" fill="#eff6ff" stroke="#2563eb"/>
+<text x="500" y="515" font-size="15" fill="#17233b" font-weight="500" text-anchor="middle">Read roll number as text</text>
+<path d="M 500 563.0 L 615.0 613 L 500 663.0 L 385.0 613 Z" fill="#f5f3ff" stroke="#7c3aed"/>
+<text x="500" y="618" font-size="15" fill="#17233b" font-weight="500" text-anchor="middle">roll_number.isdigit()?</text>
+<rect x="706.0" y="583.0" width="248" height="60" rx="10" fill="#fef2f2" stroke="#dc2626"/>
+<text x="830" y="608" font-size="15" fill="#17233b" font-weight="500" text-anchor="middle">Print roll-number error</text>
+<text x="830" y="628" font-size="15" fill="#17233b" font-weight="500" text-anchor="middle">Retry roll number</text>
+<rect x="345.0" y="693.0" width="310" height="66" rx="10" fill="#eff6ff" stroke="#2563eb"/>
+<text x="500" y="721" font-size="15" fill="#17233b" font-weight="500" text-anchor="middle">Create empty marks list</text>
+<text x="500" y="741" font-size="15" fill="#17233b" font-weight="500" text-anchor="middle">Use the five SUBJECTS</text>
+<rect x="345.0" y="805.0" width="310" height="60" rx="10" fill="#eff6ff" stroke="#2563eb"/>
+<text x="500" y="830" font-size="15" fill="#17233b" font-weight="500" text-anchor="middle">Read next subject&#x27;s marks</text>
+<text x="500" y="850" font-size="15" fill="#17233b" font-weight="500" text-anchor="middle">get_valid_marks(subject)</text>
+<path d="M 500 891.0 L 615.0 941 L 500 991.0 L 385.0 941 Z" fill="#f5f3ff" stroke="#7c3aed"/>
+<text x="500" y="936" font-size="15" fill="#17233b" font-weight="500" text-anchor="middle">Valid whole mark?</text>
+<text x="500" y="956" font-size="15" fill="#17233b" font-weight="500" text-anchor="middle">0–100; size limit</text>
+<rect x="54.0" y="908.0" width="244" height="66" rx="10" fill="#fef2f2" stroke="#dc2626"/>
+<text x="176" y="936" font-size="15" fill="#17233b" font-weight="500" text-anchor="middle">Print marks error</text>
+<text x="176" y="956" font-size="15" fill="#17233b" font-weight="500" text-anchor="middle">Retry this subject</text>
+<rect x="345.0" y="1023.0" width="310" height="62" rx="10" fill="#f0fdf4" stroke="#15803d"/>
+<text x="500" y="1059" font-size="15" fill="#17233b" font-weight="500" text-anchor="middle">Append the accepted mark</text>
+<path d="M 500 1114.0 L 615.0 1164 L 500 1214.0 L 385.0 1164 Z" fill="#f5f3ff" stroke="#7c3aed"/>
+<text x="500" y="1169" font-size="15" fill="#17233b" font-weight="500" text-anchor="middle">More subjects left?</text>
+<rect x="335.0" y="1243.0" width="330" height="74" rx="10" fill="#eff6ff" stroke="#2563eb"/>
+<text x="500" y="1275" font-size="15" fill="#17233b" font-weight="500" text-anchor="middle">Calculate total and percentage</text>
+<text x="500" y="1295" font-size="15" fill="#17233b" font-weight="500" text-anchor="middle">Get the percentage grade</text>
+<path d="M 500 1343.0 L 615.0 1393 L 500 1443.0 L 385.0 1393 Z" fill="#f5f3ff" stroke="#7c3aed"/>
+<text x="500" y="1398" font-size="15" fill="#17233b" font-weight="500" text-anchor="middle">Any subject &lt; 40?</text>
+<rect x="707.0" y="1363.0" width="246" height="60" rx="10" fill="#fef2f2" stroke="#dc2626"/>
+<text x="830" y="1398" font-size="15" fill="#17233b" font-weight="500" text-anchor="middle">Set grade = &quot;Fail&quot;</text>
+<rect x="335.0" y="1473.0" width="330" height="74" rx="10" fill="#f0fdf4" stroke="#15803d"/>
+<text x="500" y="1505" font-size="15" fill="#17233b" font-weight="500" text-anchor="middle">Set Pass / Fail status</text>
+<text x="500" y="1525" font-size="15" fill="#17233b" font-weight="500" text-anchor="middle">Print the complete result card</text>
+<rect x="410.0" y="1587.0" width="180" height="42" rx="21.0" fill="#f0fdf4" stroke="#15803d"/>
+<text x="500" y="1613" font-size="15" fill="#17233b" font-weight="500" text-anchor="middle">End main()</text>
+<path d="M 500 148 L 500 181" fill="none" stroke="#64748b" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M 500 241 L 500 263" fill="none" stroke="#64748b" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M 500 363 L 500 388" fill="none" stroke="#64748b" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M 500 448 L 500 480" fill="none" stroke="#64748b" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M 500 540 L 500 563" fill="none" stroke="#64748b" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M 500 663 L 500 693" fill="none" stroke="#64748b" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M 500 759 L 500 805" fill="none" stroke="#64748b" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M 500 865 L 500 891" fill="none" stroke="#64748b" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M 500 991 L 500 1023" fill="none" stroke="#64748b" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M 500 1085 L 500 1114" fill="none" stroke="#64748b" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M 500 1214 L 500 1243" fill="none" stroke="#64748b" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M 500 1317 L 500 1343" fill="none" stroke="#64748b" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M 500 1443 L 500 1473" fill="none" stroke="#64748b" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M 500 1547 L 500 1587" fill="none" stroke="#64748b" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M 385 313 L 298 313" fill="none" stroke="#64748b" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<text x="331" y="301" font-size="12" fill="#57657a" font-weight="600" text-anchor="start">No</text>
+<path d="M 54 313 L 28 313 L 28 211 L 345 211" fill="none" stroke="#64748b" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<text x="514" y="380" font-size="12" fill="#57657a" font-weight="600" text-anchor="start">Yes</text>
+<path d="M 615 613 L 706 613" fill="none" stroke="#64748b" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<text x="654" y="601" font-size="12" fill="#57657a" font-weight="600" text-anchor="start">No</text>
+<path d="M 954 613 L 973 613 L 973 510 L 655 510" fill="none" stroke="#64748b" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<text x="514" y="682" font-size="12" fill="#57657a" font-weight="600" text-anchor="start">Yes</text>
+<path d="M 385 941 L 298 941" fill="none" stroke="#64748b" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<text x="332" y="929" font-size="12" fill="#57657a" font-weight="600" text-anchor="start">No</text>
+<path d="M 54 941 L 28 941 L 28 835 L 345 835" fill="none" stroke="#64748b" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<text x="514" y="1009" font-size="12" fill="#57657a" font-weight="600" text-anchor="start">Yes</text>
+<path d="M 615 1164 L 973 1164 L 973 835 L 655 835" fill="none" stroke="#64748b" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<text x="722" y="1152" font-size="12" fill="#57657a" font-weight="600" text-anchor="start">Yes / next subject</text>
+<text x="514" y="1230" font-size="12" fill="#57657a" font-weight="600" text-anchor="start">No</text>
+<path d="M 615 1393 L 707 1393" fill="none" stroke="#64748b" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<text x="651" y="1381" font-size="12" fill="#57657a" font-weight="600" text-anchor="start">Yes</text>
+<path d="M 830 1423 L 830 1510 L 665 1510" fill="none" stroke="#64748b" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<text x="514" y="1463" font-size="12" fill="#57657a" font-weight="600" text-anchor="start">No</text>
+<text x="28" y="1651" font-size="13" fill="#57657a" font-weight="400" text-anchor="start">Pass requires an overall grade of D or better and no subject below 40.</text>
+</g>
+</svg>

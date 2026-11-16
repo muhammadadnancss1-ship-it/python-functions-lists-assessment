@@ -1,0 +1,111 @@
+--- source/smart_electricity_bill_original.py
++++ python-functions-lists-assessment/smart_electricity_bill.py
+@@ -1,52 +1,65 @@
+-# Program 2: Smart Electricity Bill Calculator
+-# Topic: for loop, range(), accumulators, and conditional statements inside loops.
++"""Bill multiple households using fictional progressive rates for practice."""
+ 
+-# Real-World Scenario
+-# Imagine an electricity company that wants to calculate the monthly electricity bills of multiple households.
+-# Instead of writing the same code repeatedlwy for every household, the company wants a program that:
+-# 1. Asks how many households need their bills calculated.
+-# 2. Takes the electricity units consumed by each household.
+-# 3. Calculates the bill using the following rates:
+-#    - First 100 units: Rs. 10 per unit.
+-#    - Next 100 units (101–200): Rs. 15 per unit.
+-#    - Units above 200: Rs. 20 per unit.
+-# 4. Calculates the total bill for every household.
+-# 5. Displays the combined electricity revenue collected from all households.
+-# Important: These rates are fictional and intended for programming practice, not actual electricity tariffs.
+-
+-# Smart Electricity Bill Calculator
+-
+-print("===== ELECTRICITY BILL SYSTEM =====")
+-
+-households = int(input("Enter the number of households: "))
+-
+-total_revenue = 0
+-
+-for household in range(1, households + 1):
+-
+-    print(f"\n--- Household {household} ---")
+-
+-    units = int(input("Enter electricity units consumed: "))
+-
+-    if units < 0:
+-        print("Invalid units! Please enter a non-negative value.")
+-        continue
+-    if units <= 100:
+-        bill = units * 10
++FIRST_SLAB_LIMIT = 100
++SECOND_SLAB_LIMIT = 200
++FIRST_RATE = 10
++SECOND_RATE = 15
++THIRD_RATE = 20
++MAX_INTEGER_DIGITS = 18
+ 
+ 
++def get_valid_integer(prompt, minimum=0):
++    """Read a bounded whole number; invalid values retry the same prompt."""
++    while True:
++        text = input(prompt).strip()
++        if text.isdecimal():
++            normalized = text.lstrip("0") or "0"
++            if len(normalized) <= MAX_INTEGER_DIGITS:
++                number = int(normalized)
++                if number >= minimum:
++                    return number
++        print(
++            f"Invalid input! Enter a whole number of {minimum} or more "
++            f"with at most {MAX_INTEGER_DIGITS} significant digits."
++        )
+ 
+-    elif units <= 200:
+-        bill = (100 * 10) + ((units - 100) * 15)
+ 
+-    else:
+-        bill = (100 * 10) + (100 * 15) + ((units - 200) * 20)
++def main():
++    """Use a for loop, range, slab conditions and revenue/count accumulators."""
++    print("===== ELECTRICITY BILL SYSTEM =====")
++    print("Practice rates only: these are not actual electricity tariffs.")
++    households = get_valid_integer("Enter the number of households: ", minimum=1)
++    total_revenue = 0
++    processed_households = 0
+ 
+-    print(f"Units Consumed: {units}")
+-    print(f"Electricity Bill: Rs. {bill}")
++    for household in range(1, households + 1):
++        print(f"\n--- Household {household} ---")
++        units = get_valid_integer("Enter electricity units consumed: ")
+ 
+-    total_revenue += bill
++        # Charge each slab separately, rather than one rate on every unit.
++        if units <= FIRST_SLAB_LIMIT:
++            bill = units * FIRST_RATE
++        elif units <= SECOND_SLAB_LIMIT:
++            bill = (
++                FIRST_SLAB_LIMIT * FIRST_RATE
++                + (units - FIRST_SLAB_LIMIT) * SECOND_RATE
++            )
++        else:
++            bill = (
++                FIRST_SLAB_LIMIT * FIRST_RATE
++                + (SECOND_SLAB_LIMIT - FIRST_SLAB_LIMIT) * SECOND_RATE
++                + (units - SECOND_SLAB_LIMIT) * THIRD_RATE
++            )
+ 
+-print("\n===== MONTHLY REVENUE REPORT =====")
+-print(f"Households Processed: {households}")
+-print(f"Total Revenue: Rs. {total_revenue}")+        print(f"Units Consumed: {units}")
++        print(f"Electricity Bill: Rs. {bill}")
++        total_revenue += bill
++        processed_households += 1
++
++    print("\n===== MONTHLY REVENUE REPORT =====")
++    print(f"Households Processed: {processed_households}")
++    print(f"Total Revenue: Rs. {total_revenue}")
++
++
++if __name__ == "__main__":
++    main()

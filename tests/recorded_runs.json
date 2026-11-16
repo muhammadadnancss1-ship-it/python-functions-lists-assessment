@@ -1,0 +1,1836 @@
+{
+  "verified_on": "2026-11-17",
+  "python_version": "3.12.14",
+  "tests_run": 83,
+  "failures": 0,
+  "errors": 0,
+  "console_scenarios": [
+    {
+      "id": "E01",
+      "task": "electricity",
+      "scenario": "Three-household worked example",
+      "inputs_description": "3 households; units 100,150,250",
+      "expected": "Bills 1000,1750,3500; processed 3; revenue 6250",
+      "inputs": [
+        "3",
+        "100",
+        "150",
+        "250"
+      ],
+      "contains": [
+        "Electricity Bill: Rs. 1000",
+        "Electricity Bill: Rs. 1750",
+        "Electricity Bill: Rs. 3500",
+        "Households Processed: 3",
+        "Total Revenue: Rs. 6250"
+      ],
+      "counts": {},
+      "file": "smart_electricity_bill.py",
+      "stdout": "===== ELECTRICITY BILL SYSTEM =====\nPractice rates only: these are not actual electricity tariffs.\nEnter the number of households: 3\n\n--- Household 1 ---\nEnter electricity units consumed: 100\nUnits Consumed: 100\nElectricity Bill: Rs. 1000\n\n--- Household 2 ---\nEnter electricity units consumed: 150\nUnits Consumed: 150\nElectricity Bill: Rs. 1750\n\n--- Household 3 ---\nEnter electricity units consumed: 250\nUnits Consumed: 250\nElectricity Bill: Rs. 3500\n\n===== MONTHLY REVENUE REPORT =====\nHouseholds Processed: 3\nTotal Revenue: Rs. 6250\n",
+      "status": "PASS"
+    },
+    {
+      "id": "E02",
+      "task": "electricity",
+      "scenario": "Units boundary 0",
+      "inputs_description": "1 household; 0 units",
+      "expected": "Bill/revenue Rs. 0; processed 1",
+      "inputs": [
+        "1",
+        "0"
+      ],
+      "contains": [
+        "Electricity Bill: Rs. 0",
+        "Total Revenue: Rs. 0",
+        "Households Processed: 1"
+      ],
+      "counts": {},
+      "file": "smart_electricity_bill.py",
+      "stdout": "===== ELECTRICITY BILL SYSTEM =====\nPractice rates only: these are not actual electricity tariffs.\nEnter the number of households: 1\n\n--- Household 1 ---\nEnter electricity units consumed: 0\nUnits Consumed: 0\nElectricity Bill: Rs. 0\n\n===== MONTHLY REVENUE REPORT =====\nHouseholds Processed: 1\nTotal Revenue: Rs. 0\n",
+      "status": "PASS"
+    },
+    {
+      "id": "E03",
+      "task": "electricity",
+      "scenario": "Units boundary 1",
+      "inputs_description": "1 household; 1 units",
+      "expected": "Bill/revenue Rs. 10; processed 1",
+      "inputs": [
+        "1",
+        "1"
+      ],
+      "contains": [
+        "Electricity Bill: Rs. 10",
+        "Total Revenue: Rs. 10",
+        "Households Processed: 1"
+      ],
+      "counts": {},
+      "file": "smart_electricity_bill.py",
+      "stdout": "===== ELECTRICITY BILL SYSTEM =====\nPractice rates only: these are not actual electricity tariffs.\nEnter the number of households: 1\n\n--- Household 1 ---\nEnter electricity units consumed: 1\nUnits Consumed: 1\nElectricity Bill: Rs. 10\n\n===== MONTHLY REVENUE REPORT =====\nHouseholds Processed: 1\nTotal Revenue: Rs. 10\n",
+      "status": "PASS"
+    },
+    {
+      "id": "E04",
+      "task": "electricity",
+      "scenario": "Units boundary 99",
+      "inputs_description": "1 household; 99 units",
+      "expected": "Bill/revenue Rs. 990; processed 1",
+      "inputs": [
+        "1",
+        "99"
+      ],
+      "contains": [
+        "Electricity Bill: Rs. 990",
+        "Total Revenue: Rs. 990",
+        "Households Processed: 1"
+      ],
+      "counts": {},
+      "file": "smart_electricity_bill.py",
+      "stdout": "===== ELECTRICITY BILL SYSTEM =====\nPractice rates only: these are not actual electricity tariffs.\nEnter the number of households: 1\n\n--- Household 1 ---\nEnter electricity units consumed: 99\nUnits Consumed: 99\nElectricity Bill: Rs. 990\n\n===== MONTHLY REVENUE REPORT =====\nHouseholds Processed: 1\nTotal Revenue: Rs. 990\n",
+      "status": "PASS"
+    },
+    {
+      "id": "E05",
+      "task": "electricity",
+      "scenario": "Units boundary 100",
+      "inputs_description": "1 household; 100 units",
+      "expected": "Bill/revenue Rs. 1000; processed 1",
+      "inputs": [
+        "1",
+        "100"
+      ],
+      "contains": [
+        "Electricity Bill: Rs. 1000",
+        "Total Revenue: Rs. 1000",
+        "Households Processed: 1"
+      ],
+      "counts": {},
+      "file": "smart_electricity_bill.py",
+      "stdout": "===== ELECTRICITY BILL SYSTEM =====\nPractice rates only: these are not actual electricity tariffs.\nEnter the number of households: 1\n\n--- Household 1 ---\nEnter electricity units consumed: 100\nUnits Consumed: 100\nElectricity Bill: Rs. 1000\n\n===== MONTHLY REVENUE REPORT =====\nHouseholds Processed: 1\nTotal Revenue: Rs. 1000\n",
+      "status": "PASS"
+    },
+    {
+      "id": "E06",
+      "task": "electricity",
+      "scenario": "Units boundary 101",
+      "inputs_description": "1 household; 101 units",
+      "expected": "Bill/revenue Rs. 1015; processed 1",
+      "inputs": [
+        "1",
+        "101"
+      ],
+      "contains": [
+        "Electricity Bill: Rs. 1015",
+        "Total Revenue: Rs. 1015",
+        "Households Processed: 1"
+      ],
+      "counts": {},
+      "file": "smart_electricity_bill.py",
+      "stdout": "===== ELECTRICITY BILL SYSTEM =====\nPractice rates only: these are not actual electricity tariffs.\nEnter the number of households: 1\n\n--- Household 1 ---\nEnter electricity units consumed: 101\nUnits Consumed: 101\nElectricity Bill: Rs. 1015\n\n===== MONTHLY REVENUE REPORT =====\nHouseholds Processed: 1\nTotal Revenue: Rs. 1015\n",
+      "status": "PASS"
+    },
+    {
+      "id": "E07",
+      "task": "electricity",
+      "scenario": "Units boundary 199",
+      "inputs_description": "1 household; 199 units",
+      "expected": "Bill/revenue Rs. 2485; processed 1",
+      "inputs": [
+        "1",
+        "199"
+      ],
+      "contains": [
+        "Electricity Bill: Rs. 2485",
+        "Total Revenue: Rs. 2485",
+        "Households Processed: 1"
+      ],
+      "counts": {},
+      "file": "smart_electricity_bill.py",
+      "stdout": "===== ELECTRICITY BILL SYSTEM =====\nPractice rates only: these are not actual electricity tariffs.\nEnter the number of households: 1\n\n--- Household 1 ---\nEnter electricity units consumed: 199\nUnits Consumed: 199\nElectricity Bill: Rs. 2485\n\n===== MONTHLY REVENUE REPORT =====\nHouseholds Processed: 1\nTotal Revenue: Rs. 2485\n",
+      "status": "PASS"
+    },
+    {
+      "id": "E08",
+      "task": "electricity",
+      "scenario": "Units boundary 200",
+      "inputs_description": "1 household; 200 units",
+      "expected": "Bill/revenue Rs. 2500; processed 1",
+      "inputs": [
+        "1",
+        "200"
+      ],
+      "contains": [
+        "Electricity Bill: Rs. 2500",
+        "Total Revenue: Rs. 2500",
+        "Households Processed: 1"
+      ],
+      "counts": {},
+      "file": "smart_electricity_bill.py",
+      "stdout": "===== ELECTRICITY BILL SYSTEM =====\nPractice rates only: these are not actual electricity tariffs.\nEnter the number of households: 1\n\n--- Household 1 ---\nEnter electricity units consumed: 200\nUnits Consumed: 200\nElectricity Bill: Rs. 2500\n\n===== MONTHLY REVENUE REPORT =====\nHouseholds Processed: 1\nTotal Revenue: Rs. 2500\n",
+      "status": "PASS"
+    },
+    {
+      "id": "E09",
+      "task": "electricity",
+      "scenario": "Units boundary 201",
+      "inputs_description": "1 household; 201 units",
+      "expected": "Bill/revenue Rs. 2520; processed 1",
+      "inputs": [
+        "1",
+        "201"
+      ],
+      "contains": [
+        "Electricity Bill: Rs. 2520",
+        "Total Revenue: Rs. 2520",
+        "Households Processed: 1"
+      ],
+      "counts": {},
+      "file": "smart_electricity_bill.py",
+      "stdout": "===== ELECTRICITY BILL SYSTEM =====\nPractice rates only: these are not actual electricity tariffs.\nEnter the number of households: 1\n\n--- Household 1 ---\nEnter electricity units consumed: 201\nUnits Consumed: 201\nElectricity Bill: Rs. 2520\n\n===== MONTHLY REVENUE REPORT =====\nHouseholds Processed: 1\nTotal Revenue: Rs. 2520\n",
+      "status": "PASS"
+    },
+    {
+      "id": "E10",
+      "task": "electricity",
+      "scenario": "Units boundary 250",
+      "inputs_description": "1 household; 250 units",
+      "expected": "Bill/revenue Rs. 3500; processed 1",
+      "inputs": [
+        "1",
+        "250"
+      ],
+      "contains": [
+        "Electricity Bill: Rs. 3500",
+        "Total Revenue: Rs. 3500",
+        "Households Processed: 1"
+      ],
+      "counts": {},
+      "file": "smart_electricity_bill.py",
+      "stdout": "===== ELECTRICITY BILL SYSTEM =====\nPractice rates only: these are not actual electricity tariffs.\nEnter the number of households: 1\n\n--- Household 1 ---\nEnter electricity units consumed: 250\nUnits Consumed: 250\nElectricity Bill: Rs. 3500\n\n===== MONTHLY REVENUE REPORT =====\nHouseholds Processed: 1\nTotal Revenue: Rs. 3500\n",
+      "status": "PASS"
+    },
+    {
+      "id": "E11",
+      "task": "electricity",
+      "scenario": "Units boundary 1000",
+      "inputs_description": "1 household; 1000 units",
+      "expected": "Bill/revenue Rs. 18500; processed 1",
+      "inputs": [
+        "1",
+        "1000"
+      ],
+      "contains": [
+        "Electricity Bill: Rs. 18500",
+        "Total Revenue: Rs. 18500",
+        "Households Processed: 1"
+      ],
+      "counts": {},
+      "file": "smart_electricity_bill.py",
+      "stdout": "===== ELECTRICITY BILL SYSTEM =====\nPractice rates only: these are not actual electricity tariffs.\nEnter the number of households: 1\n\n--- Household 1 ---\nEnter electricity units consumed: 1000\nUnits Consumed: 1000\nElectricity Bill: Rs. 18500\n\n===== MONTHLY REVENUE REPORT =====\nHouseholds Processed: 1\nTotal Revenue: Rs. 18500\n",
+      "status": "PASS"
+    },
+    {
+      "id": "E12",
+      "task": "electricity",
+      "scenario": "Zero households",
+      "inputs_description": "Count '0', then 1; units 100",
+      "expected": "Invalid count rejected once; one valid bill for Rs. 1000",
+      "inputs": [
+        "0",
+        "1",
+        "100"
+      ],
+      "contains": [
+        "Households Processed: 1",
+        "Total Revenue: Rs. 1000"
+      ],
+      "counts": {
+        "Invalid input!": 1
+      },
+      "file": "smart_electricity_bill.py",
+      "stdout": "===== ELECTRICITY BILL SYSTEM =====\nPractice rates only: these are not actual electricity tariffs.\nEnter the number of households: 0\nInvalid input! Enter a whole number of 1 or more with at most 18 significant digits.\nEnter the number of households: 1\n\n--- Household 1 ---\nEnter electricity units consumed: 100\nUnits Consumed: 100\nElectricity Bill: Rs. 1000\n\n===== MONTHLY REVENUE REPORT =====\nHouseholds Processed: 1\nTotal Revenue: Rs. 1000\n",
+      "status": "PASS"
+    },
+    {
+      "id": "E13",
+      "task": "electricity",
+      "scenario": "Negative households",
+      "inputs_description": "Count '-1', then 1; units 100",
+      "expected": "Invalid count rejected once; one valid bill for Rs. 1000",
+      "inputs": [
+        "-1",
+        "1",
+        "100"
+      ],
+      "contains": [
+        "Households Processed: 1",
+        "Total Revenue: Rs. 1000"
+      ],
+      "counts": {
+        "Invalid input!": 1
+      },
+      "file": "smart_electricity_bill.py",
+      "stdout": "===== ELECTRICITY BILL SYSTEM =====\nPractice rates only: these are not actual electricity tariffs.\nEnter the number of households: -1\nInvalid input! Enter a whole number of 1 or more with at most 18 significant digits.\nEnter the number of households: 1\n\n--- Household 1 ---\nEnter electricity units consumed: 100\nUnits Consumed: 100\nElectricity Bill: Rs. 1000\n\n===== MONTHLY REVENUE REPORT =====\nHouseholds Processed: 1\nTotal Revenue: Rs. 1000\n",
+      "status": "PASS"
+    },
+    {
+      "id": "E14",
+      "task": "electricity",
+      "scenario": "Text household count",
+      "inputs_description": "Count 'abc', then 1; units 100",
+      "expected": "Invalid count rejected once; one valid bill for Rs. 1000",
+      "inputs": [
+        "abc",
+        "1",
+        "100"
+      ],
+      "contains": [
+        "Households Processed: 1",
+        "Total Revenue: Rs. 1000"
+      ],
+      "counts": {
+        "Invalid input!": 1
+      },
+      "file": "smart_electricity_bill.py",
+      "stdout": "===== ELECTRICITY BILL SYSTEM =====\nPractice rates only: these are not actual electricity tariffs.\nEnter the number of households: abc\nInvalid input! Enter a whole number of 1 or more with at most 18 significant digits.\nEnter the number of households: 1\n\n--- Household 1 ---\nEnter electricity units consumed: 100\nUnits Consumed: 100\nElectricity Bill: Rs. 1000\n\n===== MONTHLY REVENUE REPORT =====\nHouseholds Processed: 1\nTotal Revenue: Rs. 1000\n",
+      "status": "PASS"
+    },
+    {
+      "id": "E15",
+      "task": "electricity",
+      "scenario": "Fractional household count",
+      "inputs_description": "Count '2.5', then 1; units 100",
+      "expected": "Invalid count rejected once; one valid bill for Rs. 1000",
+      "inputs": [
+        "2.5",
+        "1",
+        "100"
+      ],
+      "contains": [
+        "Households Processed: 1",
+        "Total Revenue: Rs. 1000"
+      ],
+      "counts": {
+        "Invalid input!": 1
+      },
+      "file": "smart_electricity_bill.py",
+      "stdout": "===== ELECTRICITY BILL SYSTEM =====\nPractice rates only: these are not actual electricity tariffs.\nEnter the number of households: 2.5\nInvalid input! Enter a whole number of 1 or more with at most 18 significant digits.\nEnter the number of households: 1\n\n--- Household 1 ---\nEnter electricity units consumed: 100\nUnits Consumed: 100\nElectricity Bill: Rs. 1000\n\n===== MONTHLY REVENUE REPORT =====\nHouseholds Processed: 1\nTotal Revenue: Rs. 1000\n",
+      "status": "PASS"
+    },
+    {
+      "id": "E16",
+      "task": "electricity",
+      "scenario": "Empty household count",
+      "inputs_description": "Count '', then 1; units 100",
+      "expected": "Invalid count rejected once; one valid bill for Rs. 1000",
+      "inputs": [
+        "",
+        "1",
+        "100"
+      ],
+      "contains": [
+        "Households Processed: 1",
+        "Total Revenue: Rs. 1000"
+      ],
+      "counts": {
+        "Invalid input!": 1
+      },
+      "file": "smart_electricity_bill.py",
+      "stdout": "===== ELECTRICITY BILL SYSTEM =====\nPractice rates only: these are not actual electricity tariffs.\nEnter the number of households: \nInvalid input! Enter a whole number of 1 or more with at most 18 significant digits.\nEnter the number of households: 1\n\n--- Household 1 ---\nEnter electricity units consumed: 100\nUnits Consumed: 100\nElectricity Bill: Rs. 1000\n\n===== MONTHLY REVENUE REPORT =====\nHouseholds Processed: 1\nTotal Revenue: Rs. 1000\n",
+      "status": "PASS"
+    },
+    {
+      "id": "E17",
+      "task": "electricity",
+      "scenario": "Non-decimal household digit",
+      "inputs_description": "Count '²', then 1; units 100",
+      "expected": "Invalid count rejected once; one valid bill for Rs. 1000",
+      "inputs": [
+        "²",
+        "1",
+        "100"
+      ],
+      "contains": [
+        "Households Processed: 1",
+        "Total Revenue: Rs. 1000"
+      ],
+      "counts": {
+        "Invalid input!": 1
+      },
+      "file": "smart_electricity_bill.py",
+      "stdout": "===== ELECTRICITY BILL SYSTEM =====\nPractice rates only: these are not actual electricity tariffs.\nEnter the number of households: ²\nInvalid input! Enter a whole number of 1 or more with at most 18 significant digits.\nEnter the number of households: 1\n\n--- Household 1 ---\nEnter electricity units consumed: 100\nUnits Consumed: 100\nElectricity Bill: Rs. 1000\n\n===== MONTHLY REVENUE REPORT =====\nHouseholds Processed: 1\nTotal Revenue: Rs. 1000\n",
+      "status": "PASS"
+    },
+    {
+      "id": "E18",
+      "task": "electricity",
+      "scenario": "Negative units",
+      "inputs_description": "1 household; units '-1', then 100",
+      "expected": "Retry the same household; processed 1; revenue Rs. 1000",
+      "inputs": [
+        "1",
+        "-1",
+        "100"
+      ],
+      "contains": [
+        "Households Processed: 1",
+        "Total Revenue: Rs. 1000"
+      ],
+      "counts": {
+        "Invalid input!": 1,
+        "--- Household 1 ---": 1
+      },
+      "file": "smart_electricity_bill.py",
+      "stdout": "===== ELECTRICITY BILL SYSTEM =====\nPractice rates only: these are not actual electricity tariffs.\nEnter the number of households: 1\n\n--- Household 1 ---\nEnter electricity units consumed: -1\nInvalid input! Enter a whole number of 0 or more with at most 18 significant digits.\nEnter electricity units consumed: 100\nUnits Consumed: 100\nElectricity Bill: Rs. 1000\n\n===== MONTHLY REVENUE REPORT =====\nHouseholds Processed: 1\nTotal Revenue: Rs. 1000\n",
+      "status": "PASS"
+    },
+    {
+      "id": "E19",
+      "task": "electricity",
+      "scenario": "Text units",
+      "inputs_description": "1 household; units 'abc', then 100",
+      "expected": "Retry the same household; processed 1; revenue Rs. 1000",
+      "inputs": [
+        "1",
+        "abc",
+        "100"
+      ],
+      "contains": [
+        "Households Processed: 1",
+        "Total Revenue: Rs. 1000"
+      ],
+      "counts": {
+        "Invalid input!": 1,
+        "--- Household 1 ---": 1
+      },
+      "file": "smart_electricity_bill.py",
+      "stdout": "===== ELECTRICITY BILL SYSTEM =====\nPractice rates only: these are not actual electricity tariffs.\nEnter the number of households: 1\n\n--- Household 1 ---\nEnter electricity units consumed: abc\nInvalid input! Enter a whole number of 0 or more with at most 18 significant digits.\nEnter electricity units consumed: 100\nUnits Consumed: 100\nElectricity Bill: Rs. 1000\n\n===== MONTHLY REVENUE REPORT =====\nHouseholds Processed: 1\nTotal Revenue: Rs. 1000\n",
+      "status": "PASS"
+    },
+    {
+      "id": "E20",
+      "task": "electricity",
+      "scenario": "Fractional units",
+      "inputs_description": "1 household; units '1.5', then 100",
+      "expected": "Retry the same household; processed 1; revenue Rs. 1000",
+      "inputs": [
+        "1",
+        "1.5",
+        "100"
+      ],
+      "contains": [
+        "Households Processed: 1",
+        "Total Revenue: Rs. 1000"
+      ],
+      "counts": {
+        "Invalid input!": 1,
+        "--- Household 1 ---": 1
+      },
+      "file": "smart_electricity_bill.py",
+      "stdout": "===== ELECTRICITY BILL SYSTEM =====\nPractice rates only: these are not actual electricity tariffs.\nEnter the number of households: 1\n\n--- Household 1 ---\nEnter electricity units consumed: 1.5\nInvalid input! Enter a whole number of 0 or more with at most 18 significant digits.\nEnter electricity units consumed: 100\nUnits Consumed: 100\nElectricity Bill: Rs. 1000\n\n===== MONTHLY REVENUE REPORT =====\nHouseholds Processed: 1\nTotal Revenue: Rs. 1000\n",
+      "status": "PASS"
+    },
+    {
+      "id": "E21",
+      "task": "electricity",
+      "scenario": "Empty units",
+      "inputs_description": "1 household; units '', then 100",
+      "expected": "Retry the same household; processed 1; revenue Rs. 1000",
+      "inputs": [
+        "1",
+        "",
+        "100"
+      ],
+      "contains": [
+        "Households Processed: 1",
+        "Total Revenue: Rs. 1000"
+      ],
+      "counts": {
+        "Invalid input!": 1,
+        "--- Household 1 ---": 1
+      },
+      "file": "smart_electricity_bill.py",
+      "stdout": "===== ELECTRICITY BILL SYSTEM =====\nPractice rates only: these are not actual electricity tariffs.\nEnter the number of households: 1\n\n--- Household 1 ---\nEnter electricity units consumed: \nInvalid input! Enter a whole number of 0 or more with at most 18 significant digits.\nEnter electricity units consumed: 100\nUnits Consumed: 100\nElectricity Bill: Rs. 1000\n\n===== MONTHLY REVENUE REPORT =====\nHouseholds Processed: 1\nTotal Revenue: Rs. 1000\n",
+      "status": "PASS"
+    },
+    {
+      "id": "E22",
+      "task": "electricity",
+      "scenario": "Non-decimal unit digit",
+      "inputs_description": "1 household; units '²', then 100",
+      "expected": "Retry the same household; processed 1; revenue Rs. 1000",
+      "inputs": [
+        "1",
+        "²",
+        "100"
+      ],
+      "contains": [
+        "Households Processed: 1",
+        "Total Revenue: Rs. 1000"
+      ],
+      "counts": {
+        "Invalid input!": 1,
+        "--- Household 1 ---": 1
+      },
+      "file": "smart_electricity_bill.py",
+      "stdout": "===== ELECTRICITY BILL SYSTEM =====\nPractice rates only: these are not actual electricity tariffs.\nEnter the number of households: 1\n\n--- Household 1 ---\nEnter electricity units consumed: ²\nInvalid input! Enter a whole number of 0 or more with at most 18 significant digits.\nEnter electricity units consumed: 100\nUnits Consumed: 100\nElectricity Bill: Rs. 1000\n\n===== MONTHLY REVENUE REPORT =====\nHouseholds Processed: 1\nTotal Revenue: Rs. 1000\n",
+      "status": "PASS"
+    },
+    {
+      "id": "E23",
+      "task": "electricity",
+      "scenario": "Combined invalid count and units",
+      "inputs_description": "abc,0,2 households; -1,bad,100 units; then 201",
+      "expected": "Four errors; both households billed; revenue Rs. 3520",
+      "inputs": [
+        "abc",
+        "0",
+        "2",
+        "-1",
+        "bad",
+        "100",
+        "201"
+      ],
+      "contains": [
+        "Households Processed: 2",
+        "Total Revenue: Rs. 3520"
+      ],
+      "counts": {
+        "Invalid input!": 4
+      },
+      "file": "smart_electricity_bill.py",
+      "stdout": "===== ELECTRICITY BILL SYSTEM =====\nPractice rates only: these are not actual electricity tariffs.\nEnter the number of households: abc\nInvalid input! Enter a whole number of 1 or more with at most 18 significant digits.\nEnter the number of households: 0\nInvalid input! Enter a whole number of 1 or more with at most 18 significant digits.\nEnter the number of households: 2\n\n--- Household 1 ---\nEnter electricity units consumed: -1\nInvalid input! Enter a whole number of 0 or more with at most 18 significant digits.\nEnter electricity units consumed: bad\nInvalid input! Enter a whole number of 0 or more with at most 18 significant digits.\nEnter electricity units consumed: 100\nUnits Consumed: 100\nElectricity Bill: Rs. 1000\n\n--- Household 2 ---\nEnter electricity units consumed: 201\nUnits Consumed: 201\nElectricity Bill: Rs. 2520\n\n===== MONTHLY REVENUE REPORT =====\nHouseholds Processed: 2\nTotal Revenue: Rs. 3520\n",
+      "status": "PASS"
+    },
+    {
+      "id": "E24",
+      "task": "electricity",
+      "scenario": "Zero units included in processed count",
+      "inputs_description": "3 households; units 0,50,100",
+      "expected": "Zero bill still counted; processed 3; revenue Rs. 1500",
+      "inputs": [
+        "3",
+        "0",
+        "50",
+        "100"
+      ],
+      "contains": [
+        "Households Processed: 3",
+        "Total Revenue: Rs. 1500"
+      ],
+      "counts": {},
+      "file": "smart_electricity_bill.py",
+      "stdout": "===== ELECTRICITY BILL SYSTEM =====\nPractice rates only: these are not actual electricity tariffs.\nEnter the number of households: 3\n\n--- Household 1 ---\nEnter electricity units consumed: 0\nUnits Consumed: 0\nElectricity Bill: Rs. 0\n\n--- Household 2 ---\nEnter electricity units consumed: 50\nUnits Consumed: 50\nElectricity Bill: Rs. 500\n\n--- Household 3 ---\nEnter electricity units consumed: 100\nUnits Consumed: 100\nElectricity Bill: Rs. 1000\n\n===== MONTHLY REVENUE REPORT =====\nHouseholds Processed: 3\nTotal Revenue: Rs. 1500\n",
+      "status": "PASS"
+    },
+    {
+      "id": "E25",
+      "task": "electricity",
+      "scenario": "All zero-unit households",
+      "inputs_description": "2 households; units 0,0",
+      "expected": "Two households processed; revenue Rs. 0",
+      "inputs": [
+        "2",
+        "0",
+        "0"
+      ],
+      "contains": [
+        "Households Processed: 2",
+        "Total Revenue: Rs. 0"
+      ],
+      "counts": {
+        "Electricity Bill: Rs. 0": 2
+      },
+      "file": "smart_electricity_bill.py",
+      "stdout": "===== ELECTRICITY BILL SYSTEM =====\nPractice rates only: these are not actual electricity tariffs.\nEnter the number of households: 2\n\n--- Household 1 ---\nEnter electricity units consumed: 0\nUnits Consumed: 0\nElectricity Bill: Rs. 0\n\n--- Household 2 ---\nEnter electricity units consumed: 0\nUnits Consumed: 0\nElectricity Bill: Rs. 0\n\n===== MONTHLY REVENUE REPORT =====\nHouseholds Processed: 2\nTotal Revenue: Rs. 0\n",
+      "status": "PASS"
+    },
+    {
+      "id": "E26",
+      "task": "electricity",
+      "scenario": "Oversized household count",
+      "inputs_description": "5000 nines, then 1; units 100",
+      "expected": "Digit guard rejects input without a conversion crash",
+      "inputs": [
+        "99999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999",
+        "1",
+        "100"
+      ],
+      "contains": [
+        "Households Processed: 1",
+        "Total Revenue: Rs. 1000"
+      ],
+      "counts": {
+        "Invalid input!": 1
+      },
+      "file": "smart_electricity_bill.py",
+      "stdout": "===== ELECTRICITY BILL SYSTEM =====\nPractice rates only: these are not actual electricity tariffs.\nEnter the number of households: 99999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999\nInvalid input! Enter a whole number of 1 or more with at most 18 significant digits.\nEnter the number of households: 1\n\n--- Household 1 ---\nEnter electricity units consumed: 100\nUnits Consumed: 100\nElectricity Bill: Rs. 1000\n\n===== MONTHLY REVENUE REPORT =====\nHouseholds Processed: 1\nTotal Revenue: Rs. 1000\n",
+      "status": "PASS"
+    },
+    {
+      "id": "E27",
+      "task": "electricity",
+      "scenario": "Oversized units",
+      "inputs_description": "1 household; 5000 nines, then 100 units",
+      "expected": "Digit guard retries; one bill for Rs. 1000",
+      "inputs": [
+        "1",
+        "99999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999",
+        "100"
+      ],
+      "contains": [
+        "Households Processed: 1",
+        "Total Revenue: Rs. 1000"
+      ],
+      "counts": {
+        "Invalid input!": 1
+      },
+      "file": "smart_electricity_bill.py",
+      "stdout": "===== ELECTRICITY BILL SYSTEM =====\nPractice rates only: these are not actual electricity tariffs.\nEnter the number of households: 1\n\n--- Household 1 ---\nEnter electricity units consumed: 99999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999\nInvalid input! Enter a whole number of 0 or more with at most 18 significant digits.\nEnter electricity units consumed: 100\nUnits Consumed: 100\nElectricity Bill: Rs. 1000\n\n===== MONTHLY REVENUE REPORT =====\nHouseholds Processed: 1\nTotal Revenue: Rs. 1000\n",
+      "status": "PASS"
+    },
+    {
+      "id": "E28",
+      "task": "electricity",
+      "scenario": "Leading ASCII zeros",
+      "inputs_description": "Count 0001; units 000150",
+      "expected": "Count becomes 1; units become 150; revenue Rs. 1750",
+      "inputs": [
+        "0001",
+        "000150"
+      ],
+      "contains": [
+        "Households Processed: 1",
+        "Total Revenue: Rs. 1750"
+      ],
+      "counts": {},
+      "file": "smart_electricity_bill.py",
+      "stdout": "===== ELECTRICITY BILL SYSTEM =====\nPractice rates only: these are not actual electricity tariffs.\nEnter the number of households: 0001\n\n--- Household 1 ---\nEnter electricity units consumed: 000150\nUnits Consumed: 150\nElectricity Bill: Rs. 1750\n\n===== MONTHLY REVENUE REPORT =====\nHouseholds Processed: 1\nTotal Revenue: Rs. 1750\n",
+      "status": "PASS"
+    },
+    {
+      "id": "E29",
+      "task": "electricity",
+      "scenario": "Unicode decimal units",
+      "inputs_description": "Count ٢; units ١٠٠ and ٢٠٠",
+      "expected": "Two households; bills 1000/2500; revenue Rs. 3500",
+      "inputs": [
+        "٢",
+        "١٠٠",
+        "٢٠٠"
+      ],
+      "contains": [
+        "Households Processed: 2",
+        "Total Revenue: Rs. 3500"
+      ],
+      "counts": {},
+      "file": "smart_electricity_bill.py",
+      "stdout": "===== ELECTRICITY BILL SYSTEM =====\nPractice rates only: these are not actual electricity tariffs.\nEnter the number of households: ٢\n\n--- Household 1 ---\nEnter electricity units consumed: ١٠٠\nUnits Consumed: 100\nElectricity Bill: Rs. 1000\n\n--- Household 2 ---\nEnter electricity units consumed: ٢٠٠\nUnits Consumed: 200\nElectricity Bill: Rs. 2500\n\n===== MONTHLY REVENUE REPORT =====\nHouseholds Processed: 2\nTotal Revenue: Rs. 3500\n",
+      "status": "PASS"
+    },
+    {
+      "id": "E30",
+      "task": "electricity",
+      "scenario": "Maximum integer input length",
+      "inputs_description": "1 household; 18 nines as units",
+      "expected": "Exact integer bill Rs. 19999999999999998480",
+      "inputs": [
+        "1",
+        "999999999999999999"
+      ],
+      "contains": [
+        "Electricity Bill: Rs. 19999999999999998480",
+        "Total Revenue: Rs. 19999999999999998480"
+      ],
+      "counts": {},
+      "file": "smart_electricity_bill.py",
+      "stdout": "===== ELECTRICITY BILL SYSTEM =====\nPractice rates only: these are not actual electricity tariffs.\nEnter the number of households: 1\n\n--- Household 1 ---\nEnter electricity units consumed: 999999999999999999\nUnits Consumed: 999999999999999999\nElectricity Bill: Rs. 19999999999999998480\n\n===== MONTHLY REVENUE REPORT =====\nHouseholds Processed: 1\nTotal Revenue: Rs. 19999999999999998480\n",
+      "status": "PASS"
+    },
+    {
+      "id": "E31",
+      "task": "electricity",
+      "scenario": "Nineteen-digit count",
+      "inputs_description": "19 nines, then 1; units 100",
+      "expected": "Overlong count rejected once; valid count accepted",
+      "inputs": [
+        "9999999999999999999",
+        "1",
+        "100"
+      ],
+      "contains": [
+        "Households Processed: 1"
+      ],
+      "counts": {
+        "Invalid input!": 1
+      },
+      "file": "smart_electricity_bill.py",
+      "stdout": "===== ELECTRICITY BILL SYSTEM =====\nPractice rates only: these are not actual electricity tariffs.\nEnter the number of households: 9999999999999999999\nInvalid input! Enter a whole number of 1 or more with at most 18 significant digits.\nEnter the number of households: 1\n\n--- Household 1 ---\nEnter electricity units consumed: 100\nUnits Consumed: 100\nElectricity Bill: Rs. 1000\n\n===== MONTHLY REVENUE REPORT =====\nHouseholds Processed: 1\nTotal Revenue: Rs. 1000\n",
+      "status": "PASS"
+    },
+    {
+      "id": "E32",
+      "task": "electricity",
+      "scenario": "Whitespace around numeric input",
+      "inputs_description": "Count ' 1 '; units ' 150 '",
+      "expected": "Whitespace trimmed; one bill for Rs. 1750",
+      "inputs": [
+        " 1 ",
+        " 150 "
+      ],
+      "contains": [
+        "Households Processed: 1",
+        "Total Revenue: Rs. 1750"
+      ],
+      "counts": {},
+      "file": "smart_electricity_bill.py",
+      "stdout": "===== ELECTRICITY BILL SYSTEM =====\nPractice rates only: these are not actual electricity tariffs.\nEnter the number of households:  1 \n\n--- Household 1 ---\nEnter electricity units consumed:  150 \nUnits Consumed: 150\nElectricity Bill: Rs. 1750\n\n===== MONTHLY REVENUE REPORT =====\nHouseholds Processed: 1\nTotal Revenue: Rs. 1750\n",
+      "status": "PASS"
+    },
+    {
+      "id": "R01",
+      "task": "result",
+      "scenario": "Original worked example",
+      "inputs_description": "Adnan; roll 24; 89,78,90,56,80",
+      "expected": "393/500; 78.60%; B; Pass",
+      "inputs": [
+        "Adnan",
+        "24",
+        "89",
+        "78",
+        "90",
+        "56",
+        "80"
+      ],
+      "contains": [
+        "Total Marks  : 393/500",
+        "Percentage   : 78.60%",
+        "Grade        : B",
+        "Result       : Pass"
+      ],
+      "counts": {},
+      "file": "result_card_generator.py",
+      "stdout": "==================Result Card Generator================\nEnter student name: Adnan\nEnter roll number: 24\nEnter marks for English: 89\nEnter marks for Math: 78\nEnter marks for Physics: 90\nEnter marks for Chemistry: 56\nEnter marks for Computer: 80\n\n========== STUDENT RESULT CARD ==========\nStudent Name : Adnan\nRoll Number  : 24\n-----------------------------------------\nEnglish     : 89/100\nMath        : 78/100\nPhysics     : 90/100\nChemistry   : 56/100\nComputer    : 80/100\n-----------------------------------------\nTotal Marks  : 393/500\nPercentage   : 78.60%\nGrade        : B\nResult       : Pass\n=========================================\n",
+      "status": "PASS"
+    },
+    {
+      "id": "R02",
+      "task": "result",
+      "scenario": "Name formatting and leading-zero roll",
+      "inputs_description": "Padded adnan ali; roll 001; all marks 80",
+      "expected": "Adnan Ali; roll 001 retained; A/Pass",
+      "inputs": [
+        "  adnan ali  ",
+        "001",
+        "80",
+        "80",
+        "80",
+        "80",
+        "80"
+      ],
+      "contains": [
+        "Student Name : Adnan Ali",
+        "Roll Number  : 001",
+        "Grade        : A",
+        "Result       : Pass"
+      ],
+      "counts": {},
+      "file": "result_card_generator.py",
+      "stdout": "==================Result Card Generator================\nEnter student name:   adnan ali  \nEnter roll number: 001\nEnter marks for English: 80\nEnter marks for Math: 80\nEnter marks for Physics: 80\nEnter marks for Chemistry: 80\nEnter marks for Computer: 80\n\n========== STUDENT RESULT CARD ==========\nStudent Name : Adnan Ali\nRoll Number  : 001\n-----------------------------------------\nEnglish     : 80/100\nMath        : 80/100\nPhysics     : 80/100\nChemistry   : 80/100\nComputer    : 80/100\n-----------------------------------------\nTotal Marks  : 400/500\nPercentage   : 80.00%\nGrade        : A\nResult       : Pass\n=========================================\n",
+      "status": "PASS"
+    },
+    {
+      "id": "R03",
+      "task": "result",
+      "scenario": "Numeric name",
+      "inputs_description": "Name '123', then Ali; other fields valid",
+      "expected": "Name rejected once; corrected name accepted",
+      "inputs": [
+        "123",
+        "Ali",
+        "24",
+        "80",
+        "80",
+        "80",
+        "80",
+        "80"
+      ],
+      "contains": [
+        "Student Name : Ali"
+      ],
+      "counts": {
+        "Invalid name!": 1
+      },
+      "file": "result_card_generator.py",
+      "stdout": "==================Result Card Generator================\nEnter student name: 123\nInvalid name! Please enter letters only.\nEnter student name: Ali\nEnter roll number: 24\nEnter marks for English: 80\nEnter marks for Math: 80\nEnter marks for Physics: 80\nEnter marks for Chemistry: 80\nEnter marks for Computer: 80\n\n========== STUDENT RESULT CARD ==========\nStudent Name : Ali\nRoll Number  : 24\n-----------------------------------------\nEnglish     : 80/100\nMath        : 80/100\nPhysics     : 80/100\nChemistry   : 80/100\nComputer    : 80/100\n-----------------------------------------\nTotal Marks  : 400/500\nPercentage   : 80.00%\nGrade        : A\nResult       : Pass\n=========================================\n",
+      "status": "PASS"
+    },
+    {
+      "id": "R04",
+      "task": "result",
+      "scenario": "Empty name",
+      "inputs_description": "Name '', then Ali; other fields valid",
+      "expected": "Name rejected once; corrected name accepted",
+      "inputs": [
+        "",
+        "Ali",
+        "24",
+        "80",
+        "80",
+        "80",
+        "80",
+        "80"
+      ],
+      "contains": [
+        "Student Name : Ali"
+      ],
+      "counts": {
+        "Invalid name!": 1
+      },
+      "file": "result_card_generator.py",
+      "stdout": "==================Result Card Generator================\nEnter student name: \nInvalid name! Please enter letters only.\nEnter student name: Ali\nEnter roll number: 24\nEnter marks for English: 80\nEnter marks for Math: 80\nEnter marks for Physics: 80\nEnter marks for Chemistry: 80\nEnter marks for Computer: 80\n\n========== STUDENT RESULT CARD ==========\nStudent Name : Ali\nRoll Number  : 24\n-----------------------------------------\nEnglish     : 80/100\nMath        : 80/100\nPhysics     : 80/100\nChemistry   : 80/100\nComputer    : 80/100\n-----------------------------------------\nTotal Marks  : 400/500\nPercentage   : 80.00%\nGrade        : A\nResult       : Pass\n=========================================\n",
+      "status": "PASS"
+    },
+    {
+      "id": "R05",
+      "task": "result",
+      "scenario": "Spaces-only name",
+      "inputs_description": "Name '   ', then Ali; other fields valid",
+      "expected": "Name rejected once; corrected name accepted",
+      "inputs": [
+        "   ",
+        "Ali",
+        "24",
+        "80",
+        "80",
+        "80",
+        "80",
+        "80"
+      ],
+      "contains": [
+        "Student Name : Ali"
+      ],
+      "counts": {
+        "Invalid name!": 1
+      },
+      "file": "result_card_generator.py",
+      "stdout": "==================Result Card Generator================\nEnter student name:    \nInvalid name! Please enter letters only.\nEnter student name: Ali\nEnter roll number: 24\nEnter marks for English: 80\nEnter marks for Math: 80\nEnter marks for Physics: 80\nEnter marks for Chemistry: 80\nEnter marks for Computer: 80\n\n========== STUDENT RESULT CARD ==========\nStudent Name : Ali\nRoll Number  : 24\n-----------------------------------------\nEnglish     : 80/100\nMath        : 80/100\nPhysics     : 80/100\nChemistry   : 80/100\nComputer    : 80/100\n-----------------------------------------\nTotal Marks  : 400/500\nPercentage   : 80.00%\nGrade        : A\nResult       : Pass\n=========================================\n",
+      "status": "PASS"
+    },
+    {
+      "id": "R06",
+      "task": "result",
+      "scenario": "Alphanumeric name",
+      "inputs_description": "Name 'Ali123', then Ali; other fields valid",
+      "expected": "Name rejected once; corrected name accepted",
+      "inputs": [
+        "Ali123",
+        "Ali",
+        "24",
+        "80",
+        "80",
+        "80",
+        "80",
+        "80"
+      ],
+      "contains": [
+        "Student Name : Ali"
+      ],
+      "counts": {
+        "Invalid name!": 1
+      },
+      "file": "result_card_generator.py",
+      "stdout": "==================Result Card Generator================\nEnter student name: Ali123\nInvalid name! Please enter letters only.\nEnter student name: Ali\nEnter roll number: 24\nEnter marks for English: 80\nEnter marks for Math: 80\nEnter marks for Physics: 80\nEnter marks for Chemistry: 80\nEnter marks for Computer: 80\n\n========== STUDENT RESULT CARD ==========\nStudent Name : Ali\nRoll Number  : 24\n-----------------------------------------\nEnglish     : 80/100\nMath        : 80/100\nPhysics     : 80/100\nChemistry   : 80/100\nComputer    : 80/100\n-----------------------------------------\nTotal Marks  : 400/500\nPercentage   : 80.00%\nGrade        : A\nResult       : Pass\n=========================================\n",
+      "status": "PASS"
+    },
+    {
+      "id": "R07",
+      "task": "result",
+      "scenario": "Punctuation in name",
+      "inputs_description": "Name 'Ali-Khan', then Ali; other fields valid",
+      "expected": "Name rejected once; corrected name accepted",
+      "inputs": [
+        "Ali-Khan",
+        "Ali",
+        "24",
+        "80",
+        "80",
+        "80",
+        "80",
+        "80"
+      ],
+      "contains": [
+        "Student Name : Ali"
+      ],
+      "counts": {
+        "Invalid name!": 1
+      },
+      "file": "result_card_generator.py",
+      "stdout": "==================Result Card Generator================\nEnter student name: Ali-Khan\nInvalid name! Please enter letters only.\nEnter student name: Ali\nEnter roll number: 24\nEnter marks for English: 80\nEnter marks for Math: 80\nEnter marks for Physics: 80\nEnter marks for Chemistry: 80\nEnter marks for Computer: 80\n\n========== STUDENT RESULT CARD ==========\nStudent Name : Ali\nRoll Number  : 24\n-----------------------------------------\nEnglish     : 80/100\nMath        : 80/100\nPhysics     : 80/100\nChemistry   : 80/100\nComputer    : 80/100\n-----------------------------------------\nTotal Marks  : 400/500\nPercentage   : 80.00%\nGrade        : A\nResult       : Pass\n=========================================\n",
+      "status": "PASS"
+    },
+    {
+      "id": "R08",
+      "task": "result",
+      "scenario": "Alphabetic roll",
+      "inputs_description": "Roll 'abc', then 001; other fields valid",
+      "expected": "Roll rejected once; 001 retained",
+      "inputs": [
+        "Adnan",
+        "abc",
+        "001",
+        "80",
+        "80",
+        "80",
+        "80",
+        "80"
+      ],
+      "contains": [
+        "Roll Number  : 001"
+      ],
+      "counts": {
+        "Invalid roll number!": 1
+      },
+      "file": "result_card_generator.py",
+      "stdout": "==================Result Card Generator================\nEnter student name: Adnan\nEnter roll number: abc\nInvalid roll number! Please enter digits only.\nEnter roll number: 001\nEnter marks for English: 80\nEnter marks for Math: 80\nEnter marks for Physics: 80\nEnter marks for Chemistry: 80\nEnter marks for Computer: 80\n\n========== STUDENT RESULT CARD ==========\nStudent Name : Adnan\nRoll Number  : 001\n-----------------------------------------\nEnglish     : 80/100\nMath        : 80/100\nPhysics     : 80/100\nChemistry   : 80/100\nComputer    : 80/100\n-----------------------------------------\nTotal Marks  : 400/500\nPercentage   : 80.00%\nGrade        : A\nResult       : Pass\n=========================================\n",
+      "status": "PASS"
+    },
+    {
+      "id": "R09",
+      "task": "result",
+      "scenario": "Empty roll",
+      "inputs_description": "Roll '', then 001; other fields valid",
+      "expected": "Roll rejected once; 001 retained",
+      "inputs": [
+        "Adnan",
+        "",
+        "001",
+        "80",
+        "80",
+        "80",
+        "80",
+        "80"
+      ],
+      "contains": [
+        "Roll Number  : 001"
+      ],
+      "counts": {
+        "Invalid roll number!": 1
+      },
+      "file": "result_card_generator.py",
+      "stdout": "==================Result Card Generator================\nEnter student name: Adnan\nEnter roll number: \nInvalid roll number! Please enter digits only.\nEnter roll number: 001\nEnter marks for English: 80\nEnter marks for Math: 80\nEnter marks for Physics: 80\nEnter marks for Chemistry: 80\nEnter marks for Computer: 80\n\n========== STUDENT RESULT CARD ==========\nStudent Name : Adnan\nRoll Number  : 001\n-----------------------------------------\nEnglish     : 80/100\nMath        : 80/100\nPhysics     : 80/100\nChemistry   : 80/100\nComputer    : 80/100\n-----------------------------------------\nTotal Marks  : 400/500\nPercentage   : 80.00%\nGrade        : A\nResult       : Pass\n=========================================\n",
+      "status": "PASS"
+    },
+    {
+      "id": "R10",
+      "task": "result",
+      "scenario": "Alphanumeric roll",
+      "inputs_description": "Roll '12A', then 001; other fields valid",
+      "expected": "Roll rejected once; 001 retained",
+      "inputs": [
+        "Adnan",
+        "12A",
+        "001",
+        "80",
+        "80",
+        "80",
+        "80",
+        "80"
+      ],
+      "contains": [
+        "Roll Number  : 001"
+      ],
+      "counts": {
+        "Invalid roll number!": 1
+      },
+      "file": "result_card_generator.py",
+      "stdout": "==================Result Card Generator================\nEnter student name: Adnan\nEnter roll number: 12A\nInvalid roll number! Please enter digits only.\nEnter roll number: 001\nEnter marks for English: 80\nEnter marks for Math: 80\nEnter marks for Physics: 80\nEnter marks for Chemistry: 80\nEnter marks for Computer: 80\n\n========== STUDENT RESULT CARD ==========\nStudent Name : Adnan\nRoll Number  : 001\n-----------------------------------------\nEnglish     : 80/100\nMath        : 80/100\nPhysics     : 80/100\nChemistry   : 80/100\nComputer    : 80/100\n-----------------------------------------\nTotal Marks  : 400/500\nPercentage   : 80.00%\nGrade        : A\nResult       : Pass\n=========================================\n",
+      "status": "PASS"
+    },
+    {
+      "id": "R11",
+      "task": "result",
+      "scenario": "Spaces-only roll",
+      "inputs_description": "Roll '   ', then 001; other fields valid",
+      "expected": "Roll rejected once; 001 retained",
+      "inputs": [
+        "Adnan",
+        "   ",
+        "001",
+        "80",
+        "80",
+        "80",
+        "80",
+        "80"
+      ],
+      "contains": [
+        "Roll Number  : 001"
+      ],
+      "counts": {
+        "Invalid roll number!": 1
+      },
+      "file": "result_card_generator.py",
+      "stdout": "==================Result Card Generator================\nEnter student name: Adnan\nEnter roll number:    \nInvalid roll number! Please enter digits only.\nEnter roll number: 001\nEnter marks for English: 80\nEnter marks for Math: 80\nEnter marks for Physics: 80\nEnter marks for Chemistry: 80\nEnter marks for Computer: 80\n\n========== STUDENT RESULT CARD ==========\nStudent Name : Adnan\nRoll Number  : 001\n-----------------------------------------\nEnglish     : 80/100\nMath        : 80/100\nPhysics     : 80/100\nChemistry   : 80/100\nComputer    : 80/100\n-----------------------------------------\nTotal Marks  : 400/500\nPercentage   : 80.00%\nGrade        : A\nResult       : Pass\n=========================================\n",
+      "status": "PASS"
+    },
+    {
+      "id": "R12",
+      "task": "result",
+      "scenario": "Roll follows isdigit semantics",
+      "inputs_description": "Superscript digit ² as roll; all marks 80",
+      "expected": "Roll stays text; ² accepted by isdigit; A/Pass",
+      "inputs": [
+        "Adnan",
+        "²",
+        "80",
+        "80",
+        "80",
+        "80",
+        "80"
+      ],
+      "contains": [
+        "Roll Number  : ²",
+        "Result       : Pass"
+      ],
+      "counts": {},
+      "file": "result_card_generator.py",
+      "stdout": "==================Result Card Generator================\nEnter student name: Adnan\nEnter roll number: ²\nEnter marks for English: 80\nEnter marks for Math: 80\nEnter marks for Physics: 80\nEnter marks for Chemistry: 80\nEnter marks for Computer: 80\n\n========== STUDENT RESULT CARD ==========\nStudent Name : Adnan\nRoll Number  : ²\n-----------------------------------------\nEnglish     : 80/100\nMath        : 80/100\nPhysics     : 80/100\nChemistry   : 80/100\nComputer    : 80/100\n-----------------------------------------\nTotal Marks  : 400/500\nPercentage   : 80.00%\nGrade        : A\nResult       : Pass\n=========================================\n",
+      "status": "PASS"
+    },
+    {
+      "id": "R13",
+      "task": "result",
+      "scenario": "Text mark",
+      "inputs_description": "English 'abc', then 80; other marks 80",
+      "expected": "Invalid mark rejected once; corrected marks give A/Pass",
+      "inputs": [
+        "Adnan",
+        "24",
+        "abc",
+        "80",
+        "80",
+        "80",
+        "80",
+        "80"
+      ],
+      "contains": [
+        "Total Marks  : 400/500",
+        "Grade        : A",
+        "Result       : Pass"
+      ],
+      "counts": {
+        "Invalid marks!": 1
+      },
+      "file": "result_card_generator.py",
+      "stdout": "==================Result Card Generator================\nEnter student name: Adnan\nEnter roll number: 24\nEnter marks for English: abc\nInvalid marks! Please enter numbers only.\nEnter marks for English: 80\nEnter marks for Math: 80\nEnter marks for Physics: 80\nEnter marks for Chemistry: 80\nEnter marks for Computer: 80\n\n========== STUDENT RESULT CARD ==========\nStudent Name : Adnan\nRoll Number  : 24\n-----------------------------------------\nEnglish     : 80/100\nMath        : 80/100\nPhysics     : 80/100\nChemistry   : 80/100\nComputer    : 80/100\n-----------------------------------------\nTotal Marks  : 400/500\nPercentage   : 80.00%\nGrade        : A\nResult       : Pass\n=========================================\n",
+      "status": "PASS"
+    },
+    {
+      "id": "R14",
+      "task": "result",
+      "scenario": "Negative mark",
+      "inputs_description": "English '-1', then 80; other marks 80",
+      "expected": "Invalid mark rejected once; corrected marks give A/Pass",
+      "inputs": [
+        "Adnan",
+        "24",
+        "-1",
+        "80",
+        "80",
+        "80",
+        "80",
+        "80"
+      ],
+      "contains": [
+        "Total Marks  : 400/500",
+        "Grade        : A",
+        "Result       : Pass"
+      ],
+      "counts": {
+        "Invalid marks!": 1
+      },
+      "file": "result_card_generator.py",
+      "stdout": "==================Result Card Generator================\nEnter student name: Adnan\nEnter roll number: 24\nEnter marks for English: -1\nInvalid marks! Please enter numbers only.\nEnter marks for English: 80\nEnter marks for Math: 80\nEnter marks for Physics: 80\nEnter marks for Chemistry: 80\nEnter marks for Computer: 80\n\n========== STUDENT RESULT CARD ==========\nStudent Name : Adnan\nRoll Number  : 24\n-----------------------------------------\nEnglish     : 80/100\nMath        : 80/100\nPhysics     : 80/100\nChemistry   : 80/100\nComputer    : 80/100\n-----------------------------------------\nTotal Marks  : 400/500\nPercentage   : 80.00%\nGrade        : A\nResult       : Pass\n=========================================\n",
+      "status": "PASS"
+    },
+    {
+      "id": "R15",
+      "task": "result",
+      "scenario": "Mark above 100",
+      "inputs_description": "English '101', then 80; other marks 80",
+      "expected": "Invalid mark rejected once; corrected marks give A/Pass",
+      "inputs": [
+        "Adnan",
+        "24",
+        "101",
+        "80",
+        "80",
+        "80",
+        "80",
+        "80"
+      ],
+      "contains": [
+        "Total Marks  : 400/500",
+        "Grade        : A",
+        "Result       : Pass"
+      ],
+      "counts": {
+        "Invalid marks!": 1
+      },
+      "file": "result_card_generator.py",
+      "stdout": "==================Result Card Generator================\nEnter student name: Adnan\nEnter roll number: 24\nEnter marks for English: 101\nInvalid marks! Enter marks between 0 and 100.\nEnter marks for English: 80\nEnter marks for Math: 80\nEnter marks for Physics: 80\nEnter marks for Chemistry: 80\nEnter marks for Computer: 80\n\n========== STUDENT RESULT CARD ==========\nStudent Name : Adnan\nRoll Number  : 24\n-----------------------------------------\nEnglish     : 80/100\nMath        : 80/100\nPhysics     : 80/100\nChemistry   : 80/100\nComputer    : 80/100\n-----------------------------------------\nTotal Marks  : 400/500\nPercentage   : 80.00%\nGrade        : A\nResult       : Pass\n=========================================\n",
+      "status": "PASS"
+    },
+    {
+      "id": "R16",
+      "task": "result",
+      "scenario": "Fractional mark",
+      "inputs_description": "English '1.5', then 80; other marks 80",
+      "expected": "Invalid mark rejected once; corrected marks give A/Pass",
+      "inputs": [
+        "Adnan",
+        "24",
+        "1.5",
+        "80",
+        "80",
+        "80",
+        "80",
+        "80"
+      ],
+      "contains": [
+        "Total Marks  : 400/500",
+        "Grade        : A",
+        "Result       : Pass"
+      ],
+      "counts": {
+        "Invalid marks!": 1
+      },
+      "file": "result_card_generator.py",
+      "stdout": "==================Result Card Generator================\nEnter student name: Adnan\nEnter roll number: 24\nEnter marks for English: 1.5\nInvalid marks! Please enter numbers only.\nEnter marks for English: 80\nEnter marks for Math: 80\nEnter marks for Physics: 80\nEnter marks for Chemistry: 80\nEnter marks for Computer: 80\n\n========== STUDENT RESULT CARD ==========\nStudent Name : Adnan\nRoll Number  : 24\n-----------------------------------------\nEnglish     : 80/100\nMath        : 80/100\nPhysics     : 80/100\nChemistry   : 80/100\nComputer    : 80/100\n-----------------------------------------\nTotal Marks  : 400/500\nPercentage   : 80.00%\nGrade        : A\nResult       : Pass\n=========================================\n",
+      "status": "PASS"
+    },
+    {
+      "id": "R17",
+      "task": "result",
+      "scenario": "Empty mark",
+      "inputs_description": "English '', then 80; other marks 80",
+      "expected": "Invalid mark rejected once; corrected marks give A/Pass",
+      "inputs": [
+        "Adnan",
+        "24",
+        "",
+        "80",
+        "80",
+        "80",
+        "80",
+        "80"
+      ],
+      "contains": [
+        "Total Marks  : 400/500",
+        "Grade        : A",
+        "Result       : Pass"
+      ],
+      "counts": {
+        "Invalid marks!": 1
+      },
+      "file": "result_card_generator.py",
+      "stdout": "==================Result Card Generator================\nEnter student name: Adnan\nEnter roll number: 24\nEnter marks for English: \nInvalid marks! Please enter numbers only.\nEnter marks for English: 80\nEnter marks for Math: 80\nEnter marks for Physics: 80\nEnter marks for Chemistry: 80\nEnter marks for Computer: 80\n\n========== STUDENT RESULT CARD ==========\nStudent Name : Adnan\nRoll Number  : 24\n-----------------------------------------\nEnglish     : 80/100\nMath        : 80/100\nPhysics     : 80/100\nChemistry   : 80/100\nComputer    : 80/100\n-----------------------------------------\nTotal Marks  : 400/500\nPercentage   : 80.00%\nGrade        : A\nResult       : Pass\n=========================================\n",
+      "status": "PASS"
+    },
+    {
+      "id": "R18",
+      "task": "result",
+      "scenario": "Spaces-only mark",
+      "inputs_description": "English '   ', then 80; other marks 80",
+      "expected": "Invalid mark rejected once; corrected marks give A/Pass",
+      "inputs": [
+        "Adnan",
+        "24",
+        "   ",
+        "80",
+        "80",
+        "80",
+        "80",
+        "80"
+      ],
+      "contains": [
+        "Total Marks  : 400/500",
+        "Grade        : A",
+        "Result       : Pass"
+      ],
+      "counts": {
+        "Invalid marks!": 1
+      },
+      "file": "result_card_generator.py",
+      "stdout": "==================Result Card Generator================\nEnter student name: Adnan\nEnter roll number: 24\nEnter marks for English:    \nInvalid marks! Please enter numbers only.\nEnter marks for English: 80\nEnter marks for Math: 80\nEnter marks for Physics: 80\nEnter marks for Chemistry: 80\nEnter marks for Computer: 80\n\n========== STUDENT RESULT CARD ==========\nStudent Name : Adnan\nRoll Number  : 24\n-----------------------------------------\nEnglish     : 80/100\nMath        : 80/100\nPhysics     : 80/100\nChemistry   : 80/100\nComputer    : 80/100\n-----------------------------------------\nTotal Marks  : 400/500\nPercentage   : 80.00%\nGrade        : A\nResult       : Pass\n=========================================\n",
+      "status": "PASS"
+    },
+    {
+      "id": "R19",
+      "task": "result",
+      "scenario": "Non-decimal digit regression",
+      "inputs_description": "English '²', then 80; other marks 80",
+      "expected": "Invalid mark rejected once; corrected marks give A/Pass",
+      "inputs": [
+        "Adnan",
+        "24",
+        "²",
+        "80",
+        "80",
+        "80",
+        "80",
+        "80"
+      ],
+      "contains": [
+        "Total Marks  : 400/500",
+        "Grade        : A",
+        "Result       : Pass"
+      ],
+      "counts": {
+        "Invalid marks!": 1
+      },
+      "file": "result_card_generator.py",
+      "stdout": "==================Result Card Generator================\nEnter student name: Adnan\nEnter roll number: 24\nEnter marks for English: ²\nInvalid marks! Please enter numbers only.\nEnter marks for English: 80\nEnter marks for Math: 80\nEnter marks for Physics: 80\nEnter marks for Chemistry: 80\nEnter marks for Computer: 80\n\n========== STUDENT RESULT CARD ==========\nStudent Name : Adnan\nRoll Number  : 24\n-----------------------------------------\nEnglish     : 80/100\nMath        : 80/100\nPhysics     : 80/100\nChemistry   : 80/100\nComputer    : 80/100\n-----------------------------------------\nTotal Marks  : 400/500\nPercentage   : 80.00%\nGrade        : A\nResult       : Pass\n=========================================\n",
+      "status": "PASS"
+    },
+    {
+      "id": "R20",
+      "task": "result",
+      "scenario": "Unicode decimal marks",
+      "inputs_description": "Arabic-Indic ٨٠ in every subject",
+      "expected": "Each mark converts to 80; 400/500; A/Pass",
+      "inputs": [
+        "Adnan",
+        "24",
+        "٨٠",
+        "٨٠",
+        "٨٠",
+        "٨٠",
+        "٨٠"
+      ],
+      "contains": [
+        "Total Marks  : 400/500",
+        "Grade        : A"
+      ],
+      "counts": {},
+      "file": "result_card_generator.py",
+      "stdout": "==================Result Card Generator================\nEnter student name: Adnan\nEnter roll number: 24\nEnter marks for English: ٨٠\nEnter marks for Math: ٨٠\nEnter marks for Physics: ٨٠\nEnter marks for Chemistry: ٨٠\nEnter marks for Computer: ٨٠\n\n========== STUDENT RESULT CARD ==========\nStudent Name : Adnan\nRoll Number  : 24\n-----------------------------------------\nEnglish     : 80/100\nMath        : 80/100\nPhysics     : 80/100\nChemistry   : 80/100\nComputer    : 80/100\n-----------------------------------------\nTotal Marks  : 400/500\nPercentage   : 80.00%\nGrade        : A\nResult       : Pass\n=========================================\n",
+      "status": "PASS"
+    },
+    {
+      "id": "R21",
+      "task": "result",
+      "scenario": "Oversized marks regression",
+      "inputs_description": "5000 nines, then 80; other marks 80",
+      "expected": "Oversized mark rejected without conversion crash",
+      "inputs": [
+        "Adnan",
+        "24",
+        "99999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999",
+        "80",
+        "80",
+        "80",
+        "80",
+        "80"
+      ],
+      "contains": [
+        "Total Marks  : 400/500"
+      ],
+      "counts": {
+        "Invalid marks!": 1
+      },
+      "file": "result_card_generator.py",
+      "stdout": "==================Result Card Generator================\nEnter student name: Adnan\nEnter roll number: 24\nEnter marks for English: 99999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999\nInvalid marks! Enter marks between 0 and 100.\nEnter marks for English: 80\nEnter marks for Math: 80\nEnter marks for Physics: 80\nEnter marks for Chemistry: 80\nEnter marks for Computer: 80\n\n========== STUDENT RESULT CARD ==========\nStudent Name : Adnan\nRoll Number  : 24\n-----------------------------------------\nEnglish     : 80/100\nMath        : 80/100\nPhysics     : 80/100\nChemistry   : 80/100\nComputer    : 80/100\n-----------------------------------------\nTotal Marks  : 400/500\nPercentage   : 80.00%\nGrade        : A\nResult       : Pass\n=========================================\n",
+      "status": "PASS"
+    },
+    {
+      "id": "R22",
+      "task": "result",
+      "scenario": "Leading zeros before a mark",
+      "inputs_description": "5000 ASCII zeros followed by 80",
+      "expected": "Leading zeros stripped safely; mark 80 accepted",
+      "inputs": [
+        "Adnan",
+        "24",
+        "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000080",
+        "80",
+        "80",
+        "80",
+        "80"
+      ],
+      "contains": [
+        "Total Marks  : 400/500"
+      ],
+      "counts": {
+        "Invalid marks!": 0
+      },
+      "file": "result_card_generator.py",
+      "stdout": "==================Result Card Generator================\nEnter student name: Adnan\nEnter roll number: 24\nEnter marks for English: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000080\nEnter marks for Math: 80\nEnter marks for Physics: 80\nEnter marks for Chemistry: 80\nEnter marks for Computer: 80\n\n========== STUDENT RESULT CARD ==========\nStudent Name : Adnan\nRoll Number  : 24\n-----------------------------------------\nEnglish     : 80/100\nMath        : 80/100\nPhysics     : 80/100\nChemistry   : 80/100\nComputer    : 80/100\n-----------------------------------------\nTotal Marks  : 400/500\nPercentage   : 80.00%\nGrade        : A\nResult       : Pass\n=========================================\n",
+      "status": "PASS"
+    },
+    {
+      "id": "R23",
+      "task": "result",
+      "scenario": "All zero marks",
+      "inputs_description": "0,0,0,0,0",
+      "expected": "0/500; 0.00%; Fail",
+      "inputs": [
+        "Adnan",
+        "24",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "contains": [
+        "Total Marks  : 0/500",
+        "Percentage   : 0.00%",
+        "Grade        : Fail",
+        "Result       : Fail"
+      ],
+      "counts": {},
+      "file": "result_card_generator.py",
+      "stdout": "==================Result Card Generator================\nEnter student name: Adnan\nEnter roll number: 24\nEnter marks for English: 0\nEnter marks for Math: 0\nEnter marks for Physics: 0\nEnter marks for Chemistry: 0\nEnter marks for Computer: 0\n\n========== STUDENT RESULT CARD ==========\nStudent Name : Adnan\nRoll Number  : 24\n-----------------------------------------\nEnglish     : 0/100\nMath        : 0/100\nPhysics     : 0/100\nChemistry   : 0/100\nComputer    : 0/100\n-----------------------------------------\nTotal Marks  : 0/500\nPercentage   : 0.00%\nGrade        : Fail\nResult       : Fail\n=========================================\n",
+      "status": "PASS"
+    },
+    {
+      "id": "R24",
+      "task": "result",
+      "scenario": "All maximum marks",
+      "inputs_description": "100,100,100,100,100",
+      "expected": "500/500; 100.00%; A+/Pass",
+      "inputs": [
+        "Adnan",
+        "24",
+        "100",
+        "100",
+        "100",
+        "100",
+        "100"
+      ],
+      "contains": [
+        "Total Marks  : 500/500",
+        "Percentage   : 100.00%",
+        "Grade        : A+",
+        "Result       : Pass"
+      ],
+      "counts": {},
+      "file": "result_card_generator.py",
+      "stdout": "==================Result Card Generator================\nEnter student name: Adnan\nEnter roll number: 24\nEnter marks for English: 100\nEnter marks for Math: 100\nEnter marks for Physics: 100\nEnter marks for Chemistry: 100\nEnter marks for Computer: 100\n\n========== STUDENT RESULT CARD ==========\nStudent Name : Adnan\nRoll Number  : 24\n-----------------------------------------\nEnglish     : 100/100\nMath        : 100/100\nPhysics     : 100/100\nChemistry   : 100/100\nComputer    : 100/100\n-----------------------------------------\nTotal Marks  : 500/500\nPercentage   : 100.00%\nGrade        : A+\nResult       : Pass\n=========================================\n",
+      "status": "PASS"
+    },
+    {
+      "id": "R25",
+      "task": "result",
+      "scenario": "Subject threshold alone is not enough",
+      "inputs_description": "40 in all five subjects",
+      "expected": "40.00% overall; Fail even though no subject is below 40",
+      "inputs": [
+        "Adnan",
+        "24",
+        "40",
+        "40",
+        "40",
+        "40",
+        "40"
+      ],
+      "contains": [
+        "Percentage   : 40.00%",
+        "Grade        : Fail",
+        "Result       : Fail"
+      ],
+      "counts": {},
+      "file": "result_card_generator.py",
+      "stdout": "==================Result Card Generator================\nEnter student name: Adnan\nEnter roll number: 24\nEnter marks for English: 40\nEnter marks for Math: 40\nEnter marks for Physics: 40\nEnter marks for Chemistry: 40\nEnter marks for Computer: 40\n\n========== STUDENT RESULT CARD ==========\nStudent Name : Adnan\nRoll Number  : 24\n-----------------------------------------\nEnglish     : 40/100\nMath        : 40/100\nPhysics     : 40/100\nChemistry   : 40/100\nComputer    : 40/100\n-----------------------------------------\nTotal Marks  : 200/500\nPercentage   : 40.00%\nGrade        : Fail\nResult       : Fail\n=========================================\n",
+      "status": "PASS"
+    },
+    {
+      "id": "R26",
+      "task": "result",
+      "scenario": "Just below overall pass threshold",
+      "inputs_description": "49,50,50,50,50",
+      "expected": "249/500; 49.80%; Fail",
+      "inputs": [
+        "Adnan",
+        "24",
+        "49",
+        "50",
+        "50",
+        "50",
+        "50"
+      ],
+      "contains": [
+        "Total Marks  : 249/500",
+        "Percentage   : 49.80%",
+        "Grade        : Fail"
+      ],
+      "counts": {},
+      "file": "result_card_generator.py",
+      "stdout": "==================Result Card Generator================\nEnter student name: Adnan\nEnter roll number: 24\nEnter marks for English: 49\nEnter marks for Math: 50\nEnter marks for Physics: 50\nEnter marks for Chemistry: 50\nEnter marks for Computer: 50\n\n========== STUDENT RESULT CARD ==========\nStudent Name : Adnan\nRoll Number  : 24\n-----------------------------------------\nEnglish     : 49/100\nMath        : 50/100\nPhysics     : 50/100\nChemistry   : 50/100\nComputer    : 50/100\n-----------------------------------------\nTotal Marks  : 249/500\nPercentage   : 49.80%\nGrade        : Fail\nResult       : Fail\n=========================================\n",
+      "status": "PASS"
+    },
+    {
+      "id": "R27",
+      "task": "result",
+      "scenario": "Exact overall pass threshold",
+      "inputs_description": "50 in every subject",
+      "expected": "250/500; 50.00%; D/Pass",
+      "inputs": [
+        "Adnan",
+        "24",
+        "50",
+        "50",
+        "50",
+        "50",
+        "50"
+      ],
+      "contains": [
+        "Total Marks  : 250/500",
+        "Percentage   : 50.00%",
+        "Grade        : D",
+        "Result       : Pass"
+      ],
+      "counts": {},
+      "file": "result_card_generator.py",
+      "stdout": "==================Result Card Generator================\nEnter student name: Adnan\nEnter roll number: 24\nEnter marks for English: 50\nEnter marks for Math: 50\nEnter marks for Physics: 50\nEnter marks for Chemistry: 50\nEnter marks for Computer: 50\n\n========== STUDENT RESULT CARD ==========\nStudent Name : Adnan\nRoll Number  : 24\n-----------------------------------------\nEnglish     : 50/100\nMath        : 50/100\nPhysics     : 50/100\nChemistry   : 50/100\nComputer    : 50/100\n-----------------------------------------\nTotal Marks  : 250/500\nPercentage   : 50.00%\nGrade        : D\nResult       : Pass\n=========================================\n",
+      "status": "PASS"
+    },
+    {
+      "id": "R28",
+      "task": "result",
+      "scenario": "Exact subject pass threshold",
+      "inputs_description": "40,53,53,52,52",
+      "expected": "One subject at 40; overall 50.00%; D/Pass",
+      "inputs": [
+        "Adnan",
+        "24",
+        "40",
+        "53",
+        "53",
+        "52",
+        "52"
+      ],
+      "contains": [
+        "Percentage   : 50.00%",
+        "Grade        : D",
+        "Result       : Pass"
+      ],
+      "counts": {},
+      "file": "result_card_generator.py",
+      "stdout": "==================Result Card Generator================\nEnter student name: Adnan\nEnter roll number: 24\nEnter marks for English: 40\nEnter marks for Math: 53\nEnter marks for Physics: 53\nEnter marks for Chemistry: 52\nEnter marks for Computer: 52\n\n========== STUDENT RESULT CARD ==========\nStudent Name : Adnan\nRoll Number  : 24\n-----------------------------------------\nEnglish     : 40/100\nMath        : 53/100\nPhysics     : 53/100\nChemistry   : 52/100\nComputer    : 52/100\n-----------------------------------------\nTotal Marks  : 250/500\nPercentage   : 50.00%\nGrade        : D\nResult       : Pass\n=========================================\n",
+      "status": "PASS"
+    },
+    {
+      "id": "R29",
+      "task": "result",
+      "scenario": "English fails alone",
+      "inputs_description": "English 39; all other subjects 80",
+      "expected": "Final grade and result become Fail",
+      "inputs": [
+        "Adnan",
+        "24",
+        "39",
+        "80",
+        "80",
+        "80",
+        "80"
+      ],
+      "contains": [
+        "Grade        : Fail",
+        "Result       : Fail"
+      ],
+      "counts": {},
+      "file": "result_card_generator.py",
+      "stdout": "==================Result Card Generator================\nEnter student name: Adnan\nEnter roll number: 24\nEnter marks for English: 39\nEnter marks for Math: 80\nEnter marks for Physics: 80\nEnter marks for Chemistry: 80\nEnter marks for Computer: 80\n\n========== STUDENT RESULT CARD ==========\nStudent Name : Adnan\nRoll Number  : 24\n-----------------------------------------\nEnglish     : 39/100\nMath        : 80/100\nPhysics     : 80/100\nChemistry   : 80/100\nComputer    : 80/100\n-----------------------------------------\nTotal Marks  : 359/500\nPercentage   : 71.80%\nGrade        : Fail\nResult       : Fail\n=========================================\n",
+      "status": "PASS"
+    },
+    {
+      "id": "R30",
+      "task": "result",
+      "scenario": "Math fails alone",
+      "inputs_description": "Math 39; all other subjects 80",
+      "expected": "Final grade and result become Fail",
+      "inputs": [
+        "Adnan",
+        "24",
+        "80",
+        "39",
+        "80",
+        "80",
+        "80"
+      ],
+      "contains": [
+        "Grade        : Fail",
+        "Result       : Fail"
+      ],
+      "counts": {},
+      "file": "result_card_generator.py",
+      "stdout": "==================Result Card Generator================\nEnter student name: Adnan\nEnter roll number: 24\nEnter marks for English: 80\nEnter marks for Math: 39\nEnter marks for Physics: 80\nEnter marks for Chemistry: 80\nEnter marks for Computer: 80\n\n========== STUDENT RESULT CARD ==========\nStudent Name : Adnan\nRoll Number  : 24\n-----------------------------------------\nEnglish     : 80/100\nMath        : 39/100\nPhysics     : 80/100\nChemistry   : 80/100\nComputer    : 80/100\n-----------------------------------------\nTotal Marks  : 359/500\nPercentage   : 71.80%\nGrade        : Fail\nResult       : Fail\n=========================================\n",
+      "status": "PASS"
+    },
+    {
+      "id": "R31",
+      "task": "result",
+      "scenario": "Physics fails alone",
+      "inputs_description": "Physics 39; all other subjects 80",
+      "expected": "Final grade and result become Fail",
+      "inputs": [
+        "Adnan",
+        "24",
+        "80",
+        "80",
+        "39",
+        "80",
+        "80"
+      ],
+      "contains": [
+        "Grade        : Fail",
+        "Result       : Fail"
+      ],
+      "counts": {},
+      "file": "result_card_generator.py",
+      "stdout": "==================Result Card Generator================\nEnter student name: Adnan\nEnter roll number: 24\nEnter marks for English: 80\nEnter marks for Math: 80\nEnter marks for Physics: 39\nEnter marks for Chemistry: 80\nEnter marks for Computer: 80\n\n========== STUDENT RESULT CARD ==========\nStudent Name : Adnan\nRoll Number  : 24\n-----------------------------------------\nEnglish     : 80/100\nMath        : 80/100\nPhysics     : 39/100\nChemistry   : 80/100\nComputer    : 80/100\n-----------------------------------------\nTotal Marks  : 359/500\nPercentage   : 71.80%\nGrade        : Fail\nResult       : Fail\n=========================================\n",
+      "status": "PASS"
+    },
+    {
+      "id": "R32",
+      "task": "result",
+      "scenario": "Chemistry fails alone",
+      "inputs_description": "Chemistry 39; all other subjects 80",
+      "expected": "Final grade and result become Fail",
+      "inputs": [
+        "Adnan",
+        "24",
+        "80",
+        "80",
+        "80",
+        "39",
+        "80"
+      ],
+      "contains": [
+        "Grade        : Fail",
+        "Result       : Fail"
+      ],
+      "counts": {},
+      "file": "result_card_generator.py",
+      "stdout": "==================Result Card Generator================\nEnter student name: Adnan\nEnter roll number: 24\nEnter marks for English: 80\nEnter marks for Math: 80\nEnter marks for Physics: 80\nEnter marks for Chemistry: 39\nEnter marks for Computer: 80\n\n========== STUDENT RESULT CARD ==========\nStudent Name : Adnan\nRoll Number  : 24\n-----------------------------------------\nEnglish     : 80/100\nMath        : 80/100\nPhysics     : 80/100\nChemistry   : 39/100\nComputer    : 80/100\n-----------------------------------------\nTotal Marks  : 359/500\nPercentage   : 71.80%\nGrade        : Fail\nResult       : Fail\n=========================================\n",
+      "status": "PASS"
+    },
+    {
+      "id": "R33",
+      "task": "result",
+      "scenario": "Computer fails alone",
+      "inputs_description": "Computer 39; all other subjects 80",
+      "expected": "Final grade and result become Fail",
+      "inputs": [
+        "Adnan",
+        "24",
+        "80",
+        "80",
+        "80",
+        "80",
+        "39"
+      ],
+      "contains": [
+        "Grade        : Fail",
+        "Result       : Fail"
+      ],
+      "counts": {},
+      "file": "result_card_generator.py",
+      "stdout": "==================Result Card Generator================\nEnter student name: Adnan\nEnter roll number: 24\nEnter marks for English: 80\nEnter marks for Math: 80\nEnter marks for Physics: 80\nEnter marks for Chemistry: 80\nEnter marks for Computer: 39\n\n========== STUDENT RESULT CARD ==========\nStudent Name : Adnan\nRoll Number  : 24\n-----------------------------------------\nEnglish     : 80/100\nMath        : 80/100\nPhysics     : 80/100\nChemistry   : 80/100\nComputer    : 39/100\n-----------------------------------------\nTotal Marks  : 359/500\nPercentage   : 71.80%\nGrade        : Fail\nResult       : Fail\n=========================================\n",
+      "status": "PASS"
+    },
+    {
+      "id": "R34",
+      "task": "result",
+      "scenario": "Several subject failures",
+      "inputs_description": "39,20,80,80,80",
+      "expected": "Multiple subjects below 40; final Fail",
+      "inputs": [
+        "Adnan",
+        "24",
+        "39",
+        "20",
+        "80",
+        "80",
+        "80"
+      ],
+      "contains": [
+        "Grade        : Fail",
+        "Result       : Fail"
+      ],
+      "counts": {},
+      "file": "result_card_generator.py",
+      "stdout": "==================Result Card Generator================\nEnter student name: Adnan\nEnter roll number: 24\nEnter marks for English: 39\nEnter marks for Math: 20\nEnter marks for Physics: 80\nEnter marks for Chemistry: 80\nEnter marks for Computer: 80\n\n========== STUDENT RESULT CARD ==========\nStudent Name : Adnan\nRoll Number  : 24\n-----------------------------------------\nEnglish     : 39/100\nMath        : 20/100\nPhysics     : 80/100\nChemistry   : 80/100\nComputer    : 80/100\n-----------------------------------------\nTotal Marks  : 299/500\nPercentage   : 59.80%\nGrade        : Fail\nResult       : Fail\n=========================================\n",
+      "status": "PASS"
+    },
+    {
+      "id": "R35",
+      "task": "result",
+      "scenario": "High percentage cannot override a failed subject",
+      "inputs_description": "39,100,100,100,100",
+      "expected": "87.80% overall; final grade/result Fail",
+      "inputs": [
+        "Adnan",
+        "24",
+        "39",
+        "100",
+        "100",
+        "100",
+        "100"
+      ],
+      "contains": [
+        "Percentage   : 87.80%",
+        "Grade        : Fail",
+        "Result       : Fail"
+      ],
+      "counts": {},
+      "file": "result_card_generator.py",
+      "stdout": "==================Result Card Generator================\nEnter student name: Adnan\nEnter roll number: 24\nEnter marks for English: 39\nEnter marks for Math: 100\nEnter marks for Physics: 100\nEnter marks for Chemistry: 100\nEnter marks for Computer: 100\n\n========== STUDENT RESULT CARD ==========\nStudent Name : Adnan\nRoll Number  : 24\n-----------------------------------------\nEnglish     : 39/100\nMath        : 100/100\nPhysics     : 100/100\nChemistry   : 100/100\nComputer    : 100/100\n-----------------------------------------\nTotal Marks  : 439/500\nPercentage   : 87.80%\nGrade        : Fail\nResult       : Fail\n=========================================\n",
+      "status": "PASS"
+    },
+    {
+      "id": "R36",
+      "task": "result",
+      "scenario": "Exact 90% grade boundary",
+      "inputs_description": "90 in all subjects",
+      "expected": "90.00%; A+/Pass",
+      "inputs": [
+        "Adnan",
+        "24",
+        "90",
+        "90",
+        "90",
+        "90",
+        "90"
+      ],
+      "contains": [
+        "Percentage   : 90.00%",
+        "Grade        : A+",
+        "Result       : Pass"
+      ],
+      "counts": {},
+      "file": "result_card_generator.py",
+      "stdout": "==================Result Card Generator================\nEnter student name: Adnan\nEnter roll number: 24\nEnter marks for English: 90\nEnter marks for Math: 90\nEnter marks for Physics: 90\nEnter marks for Chemistry: 90\nEnter marks for Computer: 90\n\n========== STUDENT RESULT CARD ==========\nStudent Name : Adnan\nRoll Number  : 24\n-----------------------------------------\nEnglish     : 90/100\nMath        : 90/100\nPhysics     : 90/100\nChemistry   : 90/100\nComputer    : 90/100\n-----------------------------------------\nTotal Marks  : 450/500\nPercentage   : 90.00%\nGrade        : A+\nResult       : Pass\n=========================================\n",
+      "status": "PASS"
+    },
+    {
+      "id": "R37",
+      "task": "result",
+      "scenario": "Just below 90% grade boundary",
+      "inputs_description": "89,90,90,90,90",
+      "expected": "89.80%; A/Pass",
+      "inputs": [
+        "Adnan",
+        "24",
+        "89",
+        "90",
+        "90",
+        "90",
+        "90"
+      ],
+      "contains": [
+        "Percentage   : 89.80%",
+        "Grade        : A",
+        "Result       : Pass"
+      ],
+      "counts": {},
+      "file": "result_card_generator.py",
+      "stdout": "==================Result Card Generator================\nEnter student name: Adnan\nEnter roll number: 24\nEnter marks for English: 89\nEnter marks for Math: 90\nEnter marks for Physics: 90\nEnter marks for Chemistry: 90\nEnter marks for Computer: 90\n\n========== STUDENT RESULT CARD ==========\nStudent Name : Adnan\nRoll Number  : 24\n-----------------------------------------\nEnglish     : 89/100\nMath        : 90/100\nPhysics     : 90/100\nChemistry   : 90/100\nComputer    : 90/100\n-----------------------------------------\nTotal Marks  : 449/500\nPercentage   : 89.80%\nGrade        : A\nResult       : Pass\n=========================================\n",
+      "status": "PASS"
+    },
+    {
+      "id": "R38",
+      "task": "result",
+      "scenario": "Exact 80% grade boundary",
+      "inputs_description": "80 in all subjects",
+      "expected": "80.00%; A/Pass",
+      "inputs": [
+        "Adnan",
+        "24",
+        "80",
+        "80",
+        "80",
+        "80",
+        "80"
+      ],
+      "contains": [
+        "Percentage   : 80.00%",
+        "Grade        : A",
+        "Result       : Pass"
+      ],
+      "counts": {},
+      "file": "result_card_generator.py",
+      "stdout": "==================Result Card Generator================\nEnter student name: Adnan\nEnter roll number: 24\nEnter marks for English: 80\nEnter marks for Math: 80\nEnter marks for Physics: 80\nEnter marks for Chemistry: 80\nEnter marks for Computer: 80\n\n========== STUDENT RESULT CARD ==========\nStudent Name : Adnan\nRoll Number  : 24\n-----------------------------------------\nEnglish     : 80/100\nMath        : 80/100\nPhysics     : 80/100\nChemistry   : 80/100\nComputer    : 80/100\n-----------------------------------------\nTotal Marks  : 400/500\nPercentage   : 80.00%\nGrade        : A\nResult       : Pass\n=========================================\n",
+      "status": "PASS"
+    },
+    {
+      "id": "R39",
+      "task": "result",
+      "scenario": "Just below 80% grade boundary",
+      "inputs_description": "79,80,80,80,80",
+      "expected": "79.80%; B/Pass",
+      "inputs": [
+        "Adnan",
+        "24",
+        "79",
+        "80",
+        "80",
+        "80",
+        "80"
+      ],
+      "contains": [
+        "Percentage   : 79.80%",
+        "Grade        : B",
+        "Result       : Pass"
+      ],
+      "counts": {},
+      "file": "result_card_generator.py",
+      "stdout": "==================Result Card Generator================\nEnter student name: Adnan\nEnter roll number: 24\nEnter marks for English: 79\nEnter marks for Math: 80\nEnter marks for Physics: 80\nEnter marks for Chemistry: 80\nEnter marks for Computer: 80\n\n========== STUDENT RESULT CARD ==========\nStudent Name : Adnan\nRoll Number  : 24\n-----------------------------------------\nEnglish     : 79/100\nMath        : 80/100\nPhysics     : 80/100\nChemistry   : 80/100\nComputer    : 80/100\n-----------------------------------------\nTotal Marks  : 399/500\nPercentage   : 79.80%\nGrade        : B\nResult       : Pass\n=========================================\n",
+      "status": "PASS"
+    },
+    {
+      "id": "R40",
+      "task": "result",
+      "scenario": "Exact 70% grade boundary",
+      "inputs_description": "70 in all subjects",
+      "expected": "70.00%; B/Pass",
+      "inputs": [
+        "Adnan",
+        "24",
+        "70",
+        "70",
+        "70",
+        "70",
+        "70"
+      ],
+      "contains": [
+        "Percentage   : 70.00%",
+        "Grade        : B",
+        "Result       : Pass"
+      ],
+      "counts": {},
+      "file": "result_card_generator.py",
+      "stdout": "==================Result Card Generator================\nEnter student name: Adnan\nEnter roll number: 24\nEnter marks for English: 70\nEnter marks for Math: 70\nEnter marks for Physics: 70\nEnter marks for Chemistry: 70\nEnter marks for Computer: 70\n\n========== STUDENT RESULT CARD ==========\nStudent Name : Adnan\nRoll Number  : 24\n-----------------------------------------\nEnglish     : 70/100\nMath        : 70/100\nPhysics     : 70/100\nChemistry   : 70/100\nComputer    : 70/100\n-----------------------------------------\nTotal Marks  : 350/500\nPercentage   : 70.00%\nGrade        : B\nResult       : Pass\n=========================================\n",
+      "status": "PASS"
+    },
+    {
+      "id": "R41",
+      "task": "result",
+      "scenario": "Just below 70% grade boundary",
+      "inputs_description": "69,70,70,70,70",
+      "expected": "69.80%; C/Pass",
+      "inputs": [
+        "Adnan",
+        "24",
+        "69",
+        "70",
+        "70",
+        "70",
+        "70"
+      ],
+      "contains": [
+        "Percentage   : 69.80%",
+        "Grade        : C",
+        "Result       : Pass"
+      ],
+      "counts": {},
+      "file": "result_card_generator.py",
+      "stdout": "==================Result Card Generator================\nEnter student name: Adnan\nEnter roll number: 24\nEnter marks for English: 69\nEnter marks for Math: 70\nEnter marks for Physics: 70\nEnter marks for Chemistry: 70\nEnter marks for Computer: 70\n\n========== STUDENT RESULT CARD ==========\nStudent Name : Adnan\nRoll Number  : 24\n-----------------------------------------\nEnglish     : 69/100\nMath        : 70/100\nPhysics     : 70/100\nChemistry   : 70/100\nComputer    : 70/100\n-----------------------------------------\nTotal Marks  : 349/500\nPercentage   : 69.80%\nGrade        : C\nResult       : Pass\n=========================================\n",
+      "status": "PASS"
+    },
+    {
+      "id": "R42",
+      "task": "result",
+      "scenario": "Exact 60% grade boundary",
+      "inputs_description": "60 in all subjects",
+      "expected": "60.00%; C/Pass",
+      "inputs": [
+        "Adnan",
+        "24",
+        "60",
+        "60",
+        "60",
+        "60",
+        "60"
+      ],
+      "contains": [
+        "Percentage   : 60.00%",
+        "Grade        : C",
+        "Result       : Pass"
+      ],
+      "counts": {},
+      "file": "result_card_generator.py",
+      "stdout": "==================Result Card Generator================\nEnter student name: Adnan\nEnter roll number: 24\nEnter marks for English: 60\nEnter marks for Math: 60\nEnter marks for Physics: 60\nEnter marks for Chemistry: 60\nEnter marks for Computer: 60\n\n========== STUDENT RESULT CARD ==========\nStudent Name : Adnan\nRoll Number  : 24\n-----------------------------------------\nEnglish     : 60/100\nMath        : 60/100\nPhysics     : 60/100\nChemistry   : 60/100\nComputer    : 60/100\n-----------------------------------------\nTotal Marks  : 300/500\nPercentage   : 60.00%\nGrade        : C\nResult       : Pass\n=========================================\n",
+      "status": "PASS"
+    },
+    {
+      "id": "R43",
+      "task": "result",
+      "scenario": "Just below 60% grade boundary",
+      "inputs_description": "59,60,60,60,60",
+      "expected": "59.80%; D/Pass",
+      "inputs": [
+        "Adnan",
+        "24",
+        "59",
+        "60",
+        "60",
+        "60",
+        "60"
+      ],
+      "contains": [
+        "Percentage   : 59.80%",
+        "Grade        : D",
+        "Result       : Pass"
+      ],
+      "counts": {},
+      "file": "result_card_generator.py",
+      "stdout": "==================Result Card Generator================\nEnter student name: Adnan\nEnter roll number: 24\nEnter marks for English: 59\nEnter marks for Math: 60\nEnter marks for Physics: 60\nEnter marks for Chemistry: 60\nEnter marks for Computer: 60\n\n========== STUDENT RESULT CARD ==========\nStudent Name : Adnan\nRoll Number  : 24\n-----------------------------------------\nEnglish     : 59/100\nMath        : 60/100\nPhysics     : 60/100\nChemistry   : 60/100\nComputer    : 60/100\n-----------------------------------------\nTotal Marks  : 299/500\nPercentage   : 59.80%\nGrade        : D\nResult       : Pass\n=========================================\n",
+      "status": "PASS"
+    },
+    {
+      "id": "R44",
+      "task": "result",
+      "scenario": "Several invalid fields in one run",
+      "inputs_description": "Bad name, bad roll, text/out-of-range English; then all 50",
+      "expected": "All corrections requested; one D/Pass card",
+      "inputs": [
+        "123",
+        "Adnan",
+        "12A",
+        "001",
+        "abc",
+        "101",
+        "50",
+        "50",
+        "50",
+        "50",
+        "50"
+      ],
+      "contains": [
+        "Roll Number  : 001",
+        "Percentage   : 50.00%",
+        "Grade        : D",
+        "Result       : Pass"
+      ],
+      "counts": {
+        "Invalid name!": 1,
+        "Invalid roll number!": 1,
+        "Invalid marks!": 2,
+        "STUDENT RESULT CARD": 1
+      },
+      "file": "result_card_generator.py",
+      "stdout": "==================Result Card Generator================\nEnter student name: 123\nInvalid name! Please enter letters only.\nEnter student name: Adnan\nEnter roll number: 12A\nInvalid roll number! Please enter digits only.\nEnter roll number: 001\nEnter marks for English: abc\nInvalid marks! Please enter numbers only.\nEnter marks for English: 101\nInvalid marks! Enter marks between 0 and 100.\nEnter marks for English: 50\nEnter marks for Math: 50\nEnter marks for Physics: 50\nEnter marks for Chemistry: 50\nEnter marks for Computer: 50\n\n========== STUDENT RESULT CARD ==========\nStudent Name : Adnan\nRoll Number  : 001\n-----------------------------------------\nEnglish     : 50/100\nMath        : 50/100\nPhysics     : 50/100\nChemistry   : 50/100\nComputer    : 50/100\n-----------------------------------------\nTotal Marks  : 250/500\nPercentage   : 50.00%\nGrade        : D\nResult       : Pass\n=========================================\n",
+      "status": "PASS"
+    }
+  ],
+  "helper_checks": 3,
+  "process_checks": 4,
+  "capture_method": "Actual source execution through runpy; input reader echoes supplied values. Separate subprocess checks also use real stdin.",
+  "source_sha256": {
+    "result_card_generator.py": "b6b4e710b8316ac2673b8b20bba4eb573a72c211244f4468861eae36e31ac587",
+    "smart_electricity_bill.py": "ac2ac02a544e9130e40c2f8aac5a22d9c067d4951e39d6bf3f5840af9429167f"
+  }
+}

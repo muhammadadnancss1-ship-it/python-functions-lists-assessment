@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="670" viewBox="0 0 1000 670" role="img" aria-labelledby="title desc">
+<title id='title'>Two-task assessment overview</title><desc id='desc'>Cards show each real filename, topic, inputs, rules, output and Python concepts.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse" markerUnits="strokeWidth"><path d="M 0 0 L 10 5 L 0 10 z" fill="#64748b"/></marker>
+<linearGradient id="hero" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#102b57"/><stop offset="1" stop-color="#35205c"/></linearGradient></defs>
+<rect width="1000" height="670" fill="#ffffff"/>
+<g font-family="DejaVu Sans, Arial, sans-serif">
+<text x="28" y="31" font-size="11" fill="#2563eb" font-weight="700" text-anchor="start">PROJECT OVERVIEW</text>
+<text x="28" y="64" font-size="27" fill="#17233b" font-weight="700" text-anchor="start">Two tasks. Clear inputs. Verified results.</text>
+<text x="28" y="87" font-size="14" fill="#57657a" font-weight="400" text-anchor="start">Each program runs independently and uses only the Python standard library.</text>
+<rect x="24" y="112" width="462" height="474" rx="14" fill="#ffffff" stroke="#dce3ed"/>
+<text x="44" y="149" font-size="15" fill="#2563eb" font-weight="700" text-anchor="start">01</text>
+<text x="81" y="149" font-size="19" fill="#17233b" font-weight="700" text-anchor="start">Student Result Card</text>
+<text x="44" y="182" font-size="18" fill="#17233b" font-weight="700" text-anchor="start">result_card_generator.py</text>
+<text x="44" y="210" font-size="14" fill="#57657a" font-weight="400" text-anchor="start">Functions, strings and lists</text>
+<text x="44" y="247" font-size="11" fill="#2563eb" font-weight="700" text-anchor="start">INPUT</text>
+<text x="44" y="272" font-size="13" fill="#17233b" font-weight="400" text-anchor="start">Name, roll number, five subject marks</text>
+<text x="44" y="293" font-size="13" fill="#17233b" font-weight="400" text-anchor="start">English, Math, Physics, Chemistry, Computer</text>
+<text x="44" y="326" font-size="11" fill="#7c3aed" font-weight="700" text-anchor="start">RULES</text>
+<text x="44" y="351" font-size="13" fill="#17233b" font-weight="400" text-anchor="start">Marks 0–100; overall ≥ 50% to pass</text>
+<text x="44" y="372" font-size="13" fill="#17233b" font-weight="400" text-anchor="start">Every subject ≥ 40; otherwise final Fail</text>
+<text x="44" y="405" font-size="11" fill="#15803d" font-weight="700" text-anchor="start">OUTPUT</text>
+<text x="44" y="430" font-size="13" fill="#17233b" font-weight="400" text-anchor="start">Total / 500, percentage, grade and status</text>
+<text x="44" y="451" font-size="13" fill="#17233b" font-weight="400" text-anchor="start">Names trimmed/title-cased; roll kept as text</text>
+<text x="44" y="484" font-size="11" fill="#17233b" font-weight="700" text-anchor="start">CONCEPTS</text>
+<text x="44" y="509" font-size="13" fill="#17233b" font-weight="400" text-anchor="start">Functions • strings • list append() • loops</text>
+<text x="44" y="530" font-size="13" fill="#17233b" font-weight="400" text-anchor="start">Conditions • sum() • min() • f-strings</text>
+<rect x="514" y="112" width="462" height="474" rx="14" fill="#ffffff" stroke="#dce3ed"/>
+<text x="534" y="149" font-size="15" fill="#2563eb" font-weight="700" text-anchor="start">02</text>
+<text x="571" y="149" font-size="19" fill="#17233b" font-weight="700" text-anchor="start">Smart Electricity Bill</text>
+<text x="534" y="182" font-size="18" fill="#17233b" font-weight="700" text-anchor="start">smart_electricity_bill.py</text>
+<text x="534" y="210" font-size="14" fill="#57657a" font-weight="400" text-anchor="start">For loops, range and accumulators</text>
+<text x="534" y="247" font-size="11" fill="#2563eb" font-weight="700" text-anchor="start">INPUT</text>
+<text x="534" y="272" font-size="13" fill="#17233b" font-weight="400" text-anchor="start">Positive household count</text>
+<text x="534" y="293" font-size="13" fill="#17233b" font-weight="400" text-anchor="start">Whole-number units ≥ 0 for each household</text>
+<text x="534" y="326" font-size="11" fill="#7c3aed" font-weight="700" text-anchor="start">RULES</text>
+<text x="534" y="351" font-size="13" fill="#17233b" font-weight="400" text-anchor="start">First 100 × 10; next 100 × 15</text>
+<text x="534" y="372" font-size="13" fill="#17233b" font-weight="400" text-anchor="start">Only units above 200 × 20</text>
+<text x="534" y="405" font-size="11" fill="#15803d" font-weight="700" text-anchor="start">OUTPUT</text>
+<text x="534" y="430" font-size="13" fill="#17233b" font-weight="400" text-anchor="start">A bill for each household</text>
+<text x="534" y="451" font-size="13" fill="#17233b" font-weight="400" text-anchor="start">Processed count + combined revenue</text>
+<text x="534" y="484" font-size="11" fill="#17233b" font-weight="700" text-anchor="start">CONCEPTS</text>
+<text x="534" y="509" font-size="13" fill="#17233b" font-weight="400" text-anchor="start">for + range() • if / elif / else</text>
+<text x="534" y="530" font-size="13" fill="#17233b" font-weight="400" text-anchor="start">Input loops • exact integer accumulation</text>
+<rect x="24.0" y="598.0" width="952" height="40" rx="10" fill="#fffbeb" stroke="#b45309"/>
+<text x="500" y="623" font-size="13" fill="#17233b" font-weight="500" text-anchor="middle">Electricity rates are fictional values for programming practice.</text>
+<text x="28" y="657" font-size="11" fill="#57657a" font-weight="400" text-anchor="start">BLUE input    PURPLE decision    GREEN result    RED error / Fail    AMBER practice note</text>
+</g>
+</svg>
