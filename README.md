@@ -458,4 +458,4 @@ Each console scenario runs the actual application with a fully consumed scripted
 
 ---
 
-**Author:** YOUR_NAME · **GitHub:** [muhammadadnancss1-ship-it](https://github.com/muhammadadnancss1-ship-it)
+**Author:** Muhammad Adnan · https://github.com/muhammadadnancss1-ship-it
